@@ -1,0 +1,17 @@
+{
+    "name": "phalcon/914vote",
+    "description": "914vote background",
+    "type": "project",
+    "require": {
+        "overtrue/wechat": "^4.0.17",
+        "symfony/yaml": "^4.0.3",
+        "hashids/hashids": "^2.0.4",
+        "vlucas/phpdotenv": "^2.4",
+        "symfony/cache": "^4.0.3",
+        "fzaninotto/Faker": "^1.7"
+    },
+    "require-dev": {
+        "phalcon/ide-stubs": "*"
+    },
+    "license": "MIT"
+}

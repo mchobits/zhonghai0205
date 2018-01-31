@@ -1,0 +1,145 @@
+{% extends 'layouts/vote.volt' %}
+{% block content %}
+    {% if is_jigou %}
+    <style>
+        /*第二种排版样式*/
+        .competitor{
+            width:100%;
+            margin-bottom:1.5rem;
+        }
+        .competitor .info-bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding:1rem;
+            border-top: 0.1rem dashed rgba(255,255,255,0.5);
+        }
+        .competitor .info-bottom button{
+            width:30%;
+        }
+        .competitor .info-bottom p {
+            text-align: right;
+            flex:1;
+        }
+        .info p a {
+            color:#FFFFFF;
+        }
+        .competitor .info-bottom p {
+            text-align:left;
+        }
+        .competitor .info p {
+            padding: 0.2rem;
+        }
+        .user-number {
+
+            position: relative;
+
+        }
+        /*第二种排版样式*/
+    </style>
+        <div class="row competitor-list">
+            {% for candidate in candidates %}
+                <div class="competitor col-md-6">
+
+                    {% if candidate.head_img_url != null %}
+                    <a href="/detail?id={{ candidate.cid }}">
+                        <img class='lazy pimg' data-original="{{ candidate.head_img_url }}?x-oss-process=image/resize,w_300/auto-orient,1">
+                    </a>
+                    {% endif %}
+                    <div class="info background">
+
+                            <p>
+                                <a style="font-size: 1.8rem;" href="/detail?id={{ candidate.cid }}">
+                                    <span class="user-number">{{ candidate.number_id }}号</span> {{ candidate.name }}
+                                </a>
+                            </p>
+
+                        <div class="info-bottom">
+                            <p>当前票数为:  <span class='piao'>{{ candidate.v_count + candidate.plus_vote }}</span>票</p>
+                            <button rel="{{ candidate.cid }}"
+                                    rel3="{{ candidate.number_id }}号 {{ candidate.name }}"
+                                    rel1="{{ candidate.number_id }}"
+                                    class="dotoupiao layui-btn layui-btn-primary layui-btn-small">
+                                <i class="layui-icon" style="font-size: 1.4rem !important;">&#xe600;</i> 投票</button>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor  %}
+
+        </div>
+    {% else %}
+        <div class="row competitor-list">
+            {% for candidate in candidates %}
+                <div class="competitor col-md-6">
+                    <span class="user-number">{{ candidate.number_id }}号</span>
+                    <a href="/detail?id={{ candidate.cid }}">
+                        <img class='lazy pimg' data-original="{{ candidate.head_img_url }}?x-oss-process=image/resize,w_300/auto-orient,1">
+                    </a>
+                    <div class="info background">
+                        {% if candidate.company != null %}
+                            <p><i class="layui-icon">&#xe60c;</i> {{ candidate.name }}：{{ candidate.company }}</p>
+                        {% else %}
+                            <p><i class="layui-icon">&#xe60c;</i> {{ candidate.name }} </p>
+                        {% endif %}
+                        <div class="info-bottom">
+                            <button rel="{{ candidate.cid }}"
+                                    rel3="{{ candidate.number_id }}号 {{ candidate.name }}"
+                                    rel1="{{ candidate.number_id }}"
+                                    class="dotoupiao layui-btn layui-btn-primary layui-btn-small">
+                                <i class="layui-icon" style="font-size: 1.4rem !important;">&#xe600;</i> 投票</button>
+                            <p><span class='piao'>{{ candidate.v_count + candidate.plus_vote }}</span>票</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor  %}
+
+        </div>
+    {% endif %}
+
+    <div id="pages" style='text-align:center;'></div>
+<script>
+
+    var nowpage = {{ currPage }};
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage;
+        var layer = layui.layer;
+        laypage({
+            cont: 'pages',
+            pages: {{ totalPage }},
+            curr: nowpage,
+            skin: '#e64e0e',
+            first: false,
+            last: false,
+            prev:false,
+            next:false,
+            skip:false,
+            groups:3,
+            jump:function(obj, frist) {
+                var curr = obj.curr;
+                if(curr !== nowpage) {
+                    var loca = window.location;
+                    location.href = loca.origin + loca.pathname + '?pageNum=' + curr;
+                }
+            }
+        });
+    });
+
+    $(function () {
+        var $container = $('.competitor-list');
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            load:function(){
+
+                $container.imagesLoaded(function() {
+                    $container.masonry({
+                        itemSelector: '.competitor',
+                        gutter: 10,
+                        isAnimated: false
+                    });
+                });
+            }
+        });
+    });
+</script>
+{% endblock %}
