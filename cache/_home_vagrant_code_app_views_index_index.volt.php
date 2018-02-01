@@ -37,7 +37,7 @@
 			<img src="img/1104.png"     id="a1001"  style="position: absolute;"/>
 			
 			
-			<img src="img/1101.png"     id="a1004"  style="position: absolute;"/>
+			<img src="img/1101.png"     id="a1004"  style="position: absolute;opacity:0"/>
 			<img src="img/1106.png"     id="a1005"  style="position: absolute;opacity:0"/>
 			<img src="img/1105.png"     id="a1011"  style="position: absolute;opacity:0"/>
 
@@ -220,24 +220,26 @@
 				
 			</div>
 			<div id="page42" style="display: none">
-				<img src="img/4300.jpg"  id="a4010" style="position:absolute;" class="mrwz"/>
-				<img src="img/4301.png"  id="a4011" style="position:absolute;opacity:0"/>
-				<img src="img/4302.png"  id="a4012" style="position:absolute;opacity:0"/>
-				<img src="img/4303.png"  id="a4013" style="position:absolute;opacity:0"/>
-				<img src="img/4304.png"  id="a4014" style="position:absolute;opacity:0"/>
+				<img src="img/4300.png"  id="a4010" style="position:absolute;opacity:0"/>
+				<img src="img/2a.png"  id="a4011a" style="position:absolute;opacity:0"/>
+				<img src="img/2b.png"  id="a4011b" style="position:absolute;opacity:0"/>
+				<img src="img/2c.png"  id="a4011c" style="position:absolute;opacity:0"/>
+				<img src="img/2d.png"  id="a4011d" style="position:absolute;opacity:0"/>
 			</div>
 			<div id="page43" style="display: none">
-				<img src="img/4400.jpg"  id="a4015" style="position:absolute;" class="mrwz"/>
+				<img src="img/4400.png"  id="a4015" style="position:absolute;opacity:0"/>
 				<img src="img/4401.png"  id="a4016" style="position:absolute;opacity:0"/>
-				<img src="img/4403.png"  id="a4017" style="position:absolute;opacity:0"/>
-				<img src="img/4402.png"  id="a4018" style="position:absolute;opacity:0"/>
-				<img src="img/4404.png"  id="a4019" style="position:absolute;opacity:0"/>
+				<img src="img/3a.png"  id="a4017a" style="position:absolute;opacity:0"/>
+				<img src="img/3b.png"  id="a4017b" style="position:absolute;opacity:0"/>
+				<img src="img/3c.png"  id="a4017c" style="position:absolute;opacity:0"/>
+				<img src="img/3d.png"  id="a4017d" style="position:absolute;opacity:0"/>
 			</div>
 		</div>
 		<div id="page5" style="display: none">
 			<img src="img/107.jpg"  id="a5001" style="position:absolute;"/>
-			<img src="img/102.png"  id="a5003" style="position:absolute;opacity:0"/>
 			<img src="img/101.png"  id="a5002" style="position:absolute;opacity:0"/>
+			<img src="img/102.png"  id="a5003" style="position:absolute;opacity:0"/>
+
 			<img src="img/104.png"  id="a5004" style="position:absolute;opacity:0"/>
 			<img src="img/105.png"  id="a5005" style="position:absolute;opacity:0"/>
 			<img src="img/106.png"  id="a5006" style="position:absolute;opacity:0"/>
@@ -251,11 +253,12 @@
 			</div>
 
 			<div id="page51" style="display: none">
-				<img src="img/2109a.jpg"    id="a5008" style="position: absolute;" class="mrwz"/>
-				<img src="img/2104a.png"    id="a5010" style="position: absolute;opacity:0"/>
 				<img src="img/2103a.png"    id="a5009" style="position: absolute;opacity:0"/>
+				<img src="img/2109a.png"    id="a5008" style="position: absolute;opacity:0"/>
+				<img src="img/2104a.png"    id="a5010" style="position: absolute;opacity:0"/>
+
 				<img src="img/2105a.png"    id="a5011" style="position: absolute;opacity:0"/>
-				<img src="img/2107a.png"    id="a5012" style="position: absolute;opacity:0"/>
+				<img src="img/2105a.png"    id="a5012" style="position: absolute;opacity:0"/>
 				<img src="img/2106a.png"    id="a5013" style="position: absolute;opacity:0"/>
 				<img src="img/2106a.png"    id="a5014" style="position: absolute;opacity:0"/>
 				<img src="img/2102a.png"    id="a5015" style="position: absolute;opacity:0"/>
