@@ -276,6 +276,9 @@ function jiazaibiu() {
 		sale(70, 300, "a6001");
 		sale(340, 310, "a6002");
 		sale(410, 600, "a6003");
+        sale(410, 660, "a6004");
+        sale(0, 0, "a6005");
+        sale(0, 400, "a6006");
 
 		sale(0, 0, "b1001");
 		sale(0, 0, "b1002");
@@ -291,8 +294,19 @@ function jiazaibiu() {
 		sale(0, 0, "a7001");
 		sale(0, 500, "a7002");
 		sale(0, 0, "b8001");
-		sale(50, 40, "b8002");
-		sale(250, 700, "b8003");
+
+		sale(0, 0, "b8002");
+		sale(259, 63, "b8003");
+        sale(70, 349, "b8001a");
+        sale(70, 480, "b8001b");
+        sale(70, 170, "b8001c");
+
+        sale(163, 575, "b8001d1");
+        sale(382, 575, "b8001d2");
+        sale(113, 770, "b8001d3");
+        sale(273, 770, "b8001d4");
+        sale(436, 770, "b8001d5");
+
 		sale(50, 40, "b8002a");
 		sale(250, 700, "b8003a");
 		sale(50, 40, "b8002a1");
@@ -303,7 +317,7 @@ function jiazaibiu() {
 		sale(250, 700, "b8003a3");
 		sale(50, 40, "b8002a4");
 		sale(250, 700, "b8003a4");
-		salefs(-200, 480, "fensunumber");
+		salefs(-410, 150, "fensunumber");
 		sale(10, 200, "b8004");
 		sale(0, 500, "b8005");
 		sale(10, 610, "b8006");
@@ -344,7 +358,7 @@ function jiazaibiu() {
 		sale(30, 30, "logo3");
 		/*startdh();*/
 		/*paihangbang();*/
-		/*dh888(1);*/
+		dh888(1);
 		salediv(0, 0, "all");
 		/*$("#b8004,#b8005,#b8006,#b8007").fadeOut(500);
 		
@@ -410,29 +424,30 @@ function dh888(typenumber) {
 	$("#page8").fadeIn(500);
 
 	if (typenumber == 1) {
-		dh8a1();
-	} else if (typenumber == 2) {
-		dh8a2();
-	} else if (typenumber == 3) {
-		dh8a3();
-	} else if (typenumber == 4) {
-		dh8a4();
-	} else if (typenumber == 5) {
-		dh8a5();
-	} else if (typenumber == 6) {
-		dh8a6();
-	}
+        dh8a1();
+    }
+	// } else if (typenumber == 2) {
+	// 	dh8a2();
+	// } else if (typenumber == 3) {
+	// 	dh8a3();
+	// } else if (typenumber == 4) {
+	// 	dh8a4();
+	// } else if (typenumber == 5) {
+	// 	dh8a5();
+	// } else if (typenumber == 6) {
+	// 	dh8a6();
+	// }
 
-	setTimeout(function() {
-		$("#andiv").fadeIn(500);
-	}, 1500);
+	// setTimeout(function() {
+	// 	$("#andiv").fadeIn(500);
+	// }, 1500);
 }
 
 function dh8a1() {
 	$("#page81").fadeIn(500);
-	setTimeout(function() {
-		rotateScale("b8003", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
-	}, 600);
+	// setTimeout(function() {
+	// 	rotateScale("b8003", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
+	// }, 600);
 }
 
 function dh8a2() {
@@ -477,8 +492,10 @@ $("#b8007,#b12005").on("click", function() {
 
 //抽取红包
 $("#b8006").on("click", function() {
-	ajax.send("getHb", {}, function(data) {
+	ajax.send("getHb", {score: ceshifs}, function(data) {
+
 		$("#logo1").fadeIn(500);
+		console.log(data);
 		if (data.money > 0) {
 			$("#hbnumber").html(data.money / 100 + "元");
 			$("#page11").fadeIn(500);
@@ -520,12 +537,28 @@ $("#b1007").on("click", function() {
 	$("#age1").fadeOut(500);
 	$("#page6").fadeIn(500);
 	setTimeout(function() {
-		$("#a6002").attr("class", "xz2");
-		rotateScale("a6002", 340, 310, 370, 290, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
-		rotateScale("a6003", 410, 600, 410, 600, 0, 1, 0, 0, 0, 1, 600, 250, 0, 1);
+        rotateScale("a6001", 480, 350, 480, 350, 1, 1, 0, 0, 0, 1, 1100, 300, 0, 3);
+        rotateScale("a6003", 450, 290, 410, 290, 1, 1, 0, 0, 0, 1, 300, 800, 0, 4);
+        rotateScale("a6004", 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 4);
+        rotateScale("a6005", 0, 0, 640, 0, 1, 1, 0, 0, 1, 1, 300, 100, 0, 4);
+        rotateScale("a6006", 0, 400, -640, 400, 1, 1, 0, 0, 1, 1, 300, 100, 0, 4);
+
+        $("#a6007,#a6008,#a6009,#a6010,#a6011,#a6012").attr("class","yy");
+
+        rotateScale("a6007", 10, 480, 210, 590, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6008", 10, 480, 310, 690, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6009", 10, 480, 410, 290, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6010", 10, 480, 410, 660, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6011", 10, 480, 138, 639, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6012", 10, 480, 250, 350, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6013", 70, 250, 70, 350, 1, 1, 0, 0, 0, 1, 800, 300, 0, 4);
+        rotateScale("a6014", 70, 500, 70, 500, 1, 1, 0, 0, 0, 1, 600, 200, 0, 4);
+		// $("#a6002").attr("class", "xz2");
+		// rotateScale("a6002", 340, 310, 370, 290, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
+		// rotateScale("a6003", 410, 600, 410, 600, 0, 1, 0, 0, 0, 1, 600, 250, 0, 1);
 		setTimeout(function() {
 			huanchang();
-		}, 600);
+		}, 1600);
 	}, 1000);
 });
 
@@ -720,7 +753,7 @@ function sfs() {
 		score: ceshifs
 	}, function(data) {
 		//isVip=0表示要注册=1表示可以直接抽奖, hasMoney表示还有没有红包
-		console.log(data.isVip);
+		// console.log(data.isVip);
 		if (ceshifs12 < 70) {
 			$("#b8007").fadeIn(500);
 		} else {
@@ -776,7 +809,8 @@ function sfs() {
 	$("#fensunumber").html(ceshifs);
 
 	setTimeout(function() {
-		dh888(typenumber);
+		// dh888(typenumber);
+		dh888(1);
 	}, 3000);
 
 
@@ -784,21 +818,34 @@ function sfs() {
 
 function zl() {
 	setTimeout(function() {
-		$("#a6002").attr("class", "xz2");
-		rotateScale("a6002", 340, 310, 370, 290, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
-		rotateScale("a6003", 410, 600, 410, 600, 0, 1, 0, 0, 0, 1, 600, 250, 0, 1);
+        rotateScale("a6001", 480, 350, 480, 350, 1, 1, 0, 0, 0, 1, 1100, 300, 0, 3);
+        rotateScale("a6003", 450, 290, 410, 290, 1, 1, 0, 0, 0, 1, 300, 800, 0, 4);
+        rotateScale("a6004", 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 200, 0, 4);
+        rotateScale("a6005", 0, 0, 640, 0, 0, 0, 0, 0, 1, 1, 100, 300, 0, 4);
+        rotateScale("a6006", 0, 400, -640, 400, 0, 0, 0, 0, 1, 1, 100, 300, 0, 4);
+
+        $("#a6007,#a6008,#a6009,#a6010,#a6011,#a6012").attr("class","yy");
+
+        rotateScale("a6007", 10, 480, 210, 590, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6008", 10, 480, 310, 690, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6009", 10, 480, 410, 290, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6010", 10, 480, 410, 660, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6011", 10, 480, 138, 639, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6012", 10, 480, 250, 350, 1, 1, 0, 0, 0, 1, 600, 1500, 0, 3);
+        rotateScale("a6013", 70, 250, 70, 350, 1, 1, 0, 0, 0, 1, 800, 300, 0, 4);
+        rotateScale("a6014", 70, 500, 70, 500, 1, 1, 0, 0, 0, 1, 600, 200, 0, 4);
 		setTimeout(function() {
 			huanchang();
-		}, 600);
-	}, 1000);
+		}, 1600);
+	}, 1500);
 }
 
 var cjcj = 1;
 
 function huanchang() {
 	if (cjcj == 1) {
-		$("#page5").fadeIn(500);
-		dh5();
+		$("#page1").fadeIn(500);
+		 dh1();
 	} else if (cjcj == 2) {
 		$("#page2").fadeIn(500);
 		dh2();
@@ -815,7 +862,7 @@ function huanchang() {
 
 	setTimeout(function() {
 		$("#page6").fadeOut(500);
-	}, 500);
+	}, 1500);
 
 	setTimeout(function() {
 		cjcj++;
@@ -826,13 +873,37 @@ function huanchang() {
 		} else if (cjcj == 4) {
 			$("#a6001").attr("src", "img1/4.png");
 		} else if (cjcj == 5) {
-			$("#a6001").attr("src", "img1/6a.png");
+			$("#a6001").attr("src", "img1/5.png");
 		}
 
-		$("#a6002").attr("class", "xz1");
-		$("#a6003").css("opacity", "0");
-		rotateScale("a6002", 340, 310, 340, 310, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
-	}, 1500);
+        rotateScale("a6001", 480, 350, 480, 350, 1, 1, 0, 0, 0, 0, 1100, 300, 0, 3);
+        rotateScale("a6003", 450, 290, 410, 290, 1, 1, 0, 0, 0, 0, 300, 800, 0, 4);
+        rotateScale("a6004", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4);
+
+        rotateScale("a6005", 640, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 100, 0, 4);
+        rotateScale("a6006", -640, 400, 0, 400, 0, 0, 0, 1, 0, 0, 0, 100, 0, 4);
+        //rotateScale("a6005", 0, 0, 640, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 4);
+        //rotateScale("a6006", 0, 400, -640, 400, 1, 1, 0, 0, 1, 0, 300, 100, 0, 4);
+
+
+        rotateScale("a6007", 10, 480, 210, 590, 1, 1, 0, 0, 0, 0, 600, 150, 0, 3);
+        rotateScale("a6008", 10, 480, 310, 690, 1, 1, 0, 0, 0, 0, 600, 150, 0, 3);
+        rotateScale("a6009", 10, 480, 410, 290, 1, 1, 0, 0, 0, 0, 600, 150, 0, 3);
+        rotateScale("a6010", 10, 480, 410, 660, 1, 1, 0, 0, 0, 0, 600, 150, 0, 3);
+        rotateScale("a6011", 10, 480, 138, 639, 1, 1, 0, 0, 0, 0, 600, 150, 0, 3);
+        rotateScale("a6012", 10, 480, 250, 350, 1, 1, 0, 0, 0, 0, 600, 150, 0, 3);
+        rotateScale("a6013", 70, 250, 70, 350, 1, 1, 0, 0, 0, 0, 800, 300, 0, 4);
+        rotateScale("a6014", 70, 500, 70, 500, 1, 1, 0, 0, 0, 0, 600, 200, 0, 4);
+		// $("#a6002").attr("class", "xz1");
+		// $("#a6003").css("opacity", "0");
+		// rotateScale("a6002", 340, 310, 340, 310, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
+        // rotateScale("a6001", 340, 310, 370, 290, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
+        // rotateScale("a6002", 340, 310, 370, 290, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
+        // rotateScale("a6003", 340, 310, 370, 290, 1, 1, 0, 0, 1, 1, 300, 0, 0, 4);
+        // rotateScale("a6004", 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 4);
+        // rotateScale("a6005", 0, 0, 640, 0, 1, 1, 0, 0, 1, 1, 300, 100, 0, 4);
+        // rotateScale("a6006", 0, 400, -640, 400, 1, 1, 0, 0, 1, 1, 300, 100, 0, 4);
+	}, 2500);
 }
 
 
@@ -847,6 +918,8 @@ $(".xzxz4").on("click", function() {
 	var alrstr = $(this).attr("alt");
 
 	$("#" + idd).attr("class", "yy");
+
+    $("#timu4").fadeOut(500);
 
 	if (alrstr == "a1") {
 		dh41();
@@ -869,6 +942,8 @@ $(".xzxz5").on("click", function() {
 	var alrstr = $(this).attr("alt");
 
 	$("#" + idd).attr("class", "yy");
+
+    $("#timu5").fadeOut(500);
 
 	if (alrstr == "a1") {
 		dh51();
@@ -1189,6 +1264,7 @@ $(".xzxz1").on("click", function() {
 	var alrstr = $(this).attr("alt");
 
 	$("#" + idd).attr("class", "yy");
+    $("#timu1").fadeOut(500);
 
 	if (alrstr == "a1") {
 		$("#dat11").fadeIn(500);
@@ -1254,6 +1330,8 @@ $(".xzxz3").on("click", function() {
 	var alrstr = $(this).attr("alt");
 
 	$("#" + idd).attr("class", "yy");
+
+    $("#timu3").fadeOut(500);
 
 	if (alrstr == "a1") {
 		$("#dat31").fadeIn(500);

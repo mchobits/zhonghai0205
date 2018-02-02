@@ -43,6 +43,7 @@ Ajax.prototype.send = function(route, data, suc , err, notCheck){
         dataType:"text",
         data : data,
         error: function(data){
+        	console.log("Error Data is" + data);
         	data = JSON.parse(data);
             err(data);
         },

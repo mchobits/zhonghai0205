@@ -129,5 +129,17 @@ class IndexController extends ControllerBase
         }';
         exit;
     }
+
+    public function getHbAction()
+    {
+        echo '{"code": 0, "money": 100 }';
+        exit;
+    }
+
+    public function registerAction()
+    {
+        echo '{ "code": 0 }';
+        exit;
+    }
 }
 

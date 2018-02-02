@@ -289,10 +289,23 @@
 				<img src="img/3110a.png" id="a5034" style="position: absolute;opacity:0"/>
 			</div>
 		</div>
-		<div id="page6" style="display: none;position: absolute;background-color: #5C5C5C;">
-			<img src="img1/5.png" id="a6002" style="position:absolute;" class="xz1"/>
-			<img src="img1/1.png" id="a6001" style="position:absolute;" />
+		<div id="page6" style="display: none;position: absolute;background-color: #000000;">
+			<img src="img1/beijing.png" id="a6004" style="position:absolute;"/>
+			<img src="img1/zhezhao1.png" id="a6005" style="position:absolute;opacity:1"/>
+			<img src="img1/zhezhao1.png" id="a6006" style="position:absolute;opacity:1"/>
+			<img src="img1/5.png" id="a6002" style="position:absolute;opacity:0"/>
+			<img src="img1/1.png" id="a6001" style="position:absolute;opacity:0" />
 			<img src="img1/6.png" id="a6003" style="position:absolute;opacity:0" />
+			<img src="img1/6.png" id="a6003" style="position:absolute;opacity:0" />
+			<img src="img1/8a.png" id="a6013" style="position:absolute;opacity:0" />
+			<img src="img1/8b.png" id="a6014" style="position:absolute;opacity:0" />
+			<img src="img1/7a.png" id="a6007" style="position:absolute;opacity:0" />
+			<img src="img1/7b.png" id="a6008" style="position:absolute;opacity:0" />
+			<img src="img1/7c.png" id="a6009" style="position:absolute;opacity:0" />
+			<img src="img1/7d.png" id="a6010" style="position:absolute;opacity:0" />
+			<img src="img1/7e.png" id="a6011" style="position:absolute;opacity:0" />
+			<img src="img1/7f.png" id="a6012" style="position:absolute;opacity:0" />
+
 		</div>
 		<div id="page7" style="display: none">
 			<img src="img/zhezhao.png" id="a7001" style="position:absolute;" />
@@ -302,7 +315,26 @@
 			<img src="img2/107.png"          id="b8001"  style="position: absolute;"/>
 			<div id="page81" style="display: none">
 				<img src="img3/1001.png"     id="b8002"  style="position: absolute;"/>
-				<img src="img3/1002.png"     id="b8003"  style="position: absolute;opacity:0"/>
+				<img src="img3/1002.png"     id="b8003"  style="position: absolute;opacity:1"/>
+				<img src="img3/1003.png"     id="b8001a"  style="position: absolute;opacity:1"/>
+				<img src="img3/1004.png"     id="b8001b"  style="position: absolute;opacity:1"/>
+				<img src="img3/1005.png"     id="b8001c"  style="position: absolute;opacity:1"/>
+				<div id="b8001d1"  style="position: absolute;opacity:1">
+					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
+				</div>
+				<div id="b8001d2"  style="position: absolute;opacity:1">
+					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
+				</div>
+				<div id="b8001d3"  style="position: absolute;opacity:1">
+					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
+				</div>
+				<div id="b8001d4"  style="position: absolute;opacity:1">
+					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
+				</div>
+				<div id="b8001d5"  style="position: absolute;opacity:1">
+					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
+				</div>
+
 			</div>
 			<div id="page82" style="display: none">
 				<img src="img3/2001.png"     id="b8002a"  style="position: absolute;"/>
@@ -324,8 +356,17 @@
 				<img src="img3/6001.png"     id="b8002a4"  style="position: absolute;"/>
 				<img src="img3/6002.png"     id="b8003a4"  style="position: absolute;opacity:0"/>
 			</div>
-			<div id="fensunumber" style="position: absolute;text-align: center;font-size: 36px;font-weight: bold;" class="xzfs">
-
+			<div id="fensunumber" style="
+			position: absolute;
+			 text-align: center;
+			 color:red;
+			 font-size: 80px;
+			 font-weight: bold;
+			 width: 1060px;
+			 height: 100px;
+			 left: -410px;
+			 top: 150px;">
+				0
 			</div>
 			<div id="andiv" style="display: none">
 				<img src="img3/109.png"     id="b8004"  style="position: absolute;" class="yy"/>

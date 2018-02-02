@@ -52,6 +52,22 @@ $router->add(
     ]
 );
 
+$router->add(
+    '/huanyuhui/c/getHb',
+    [
+        'controller' => 'index',
+        'action' => 'getHb'
+    ]
+);
+
+$router->add(
+    '/huanyuhui/c/register',
+    [
+        'controller' => 'index',
+        'action' => 'register'
+    ]
+);
+
 $router->add('/admin', [
     'controller' => 'admin',
     'action' => 'index'
