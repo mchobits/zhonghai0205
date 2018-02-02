@@ -17,7 +17,7 @@ var a42time = 5000;
 var a43time = 5000;
 var a51time = 8000;
 var a52time = 8000;
-var a53time = 12000;
+var a53time = 8000;
 
 //var ajax = new Ajax("http://172.16.0.98:8080/cy_server/c/",{openid :"1213",nickname:"来自下水道的美人鱼",headimgurl:"aaaaaaaaa",topenid:"bbbb"});
 /*var tzstr = "http://172.16.0.66:8080/njbt1128/content.html";*/
@@ -246,10 +246,10 @@ function jiazaibiu() {
 		sale(0, 610, "a5010");
 		sale(340, 550, "a5011");
 		sale(342, 645, "a5012");
-		sale(361, 590, "a5013");
-		sale(363, 685, "a5014");
-		sale(363, 30, "a5015");
-		sale(395, 50, "a5016");
+		// sale(361, 590, "a5013");
+		// sale(363, 685, "a5014");
+		// sale(363, 30, "a5015");
+		// sale(395, 50, "a5016");
 
 		sale(0, 0, "a5017");
 		sale(0, 390, "a5018");
@@ -714,10 +714,13 @@ function sfs() {
 	var typenumber = 0;
 	$("#b8006,#b8005,#b8007").fadeOut(500);
 	var ceshifs12 = ceshifs;
+	ceshifs12 = 100;
+    ceshifs = 100;
 	ajax.send("subScore", {
 		score: ceshifs
 	}, function(data) {
 		//isVip=0表示要注册=1表示可以直接抽奖, hasMoney表示还有没有红包
+		console.log(data.isVip);
 		if (ceshifs12 < 70) {
 			$("#b8007").fadeIn(500);
 		} else {
@@ -731,10 +734,6 @@ function sfs() {
 				$("#b8006").fadeIn(500);
 			}
 		}
-
-
-
-
 
 		if (!data.hasMoney) {
 			//没有红包
@@ -798,8 +797,8 @@ var cjcj = 1;
 
 function huanchang() {
 	if (cjcj == 1) {
-		$("#page1").fadeIn(500);
-		dh1();
+		$("#page5").fadeIn(500);
+		dh5();
 	} else if (cjcj == 2) {
 		$("#page2").fadeIn(500);
 		dh2();
@@ -874,22 +873,22 @@ $(".xzxz5").on("click", function() {
 	if (alrstr == "a1") {
 		dh51();
 	}
-	if (alrstr == "a3") {
+	if (alrstr == "a2") {
 		dh52();
 	}
-	if (alrstr == "a2") {
+	if (alrstr == "a3") {
 		dh53();
 	}
 });
 
 function dh51() {
 	$("#page51").fadeIn(500);
-	$("#a5003").fadeOut(1500);
-    $("#a5004").fadeOut(1500);
+	$("#a5003").fadeOut(2000);
+    $("#a5004").fadeOut(2000);
     $("#a5005").fadeOut(1500);
     $("#a5002").fadeOut(1500);
-    rotateScale("a5008", 180, 320, 180, 375, 1, 1, 0, 0, 0, 1, 1000, 800, 0, 4);
-    rotateScale("a5010", 180, 600, 180, 525, 1, 1, 0, 0, 0, 1, 1000, 800, 0, 4);
+    rotateScale("a5008", 180, 320, 180, 375, 1, 1, 0, 0, 0, 1, 800, 500, 0, 4);
+    rotateScale("a5010", 180, 600, 180, 525, 1, 1, 0, 0, 0, 1, 800, 500, 0, 4);
 	$("#a5009").attr("class",'yy');
     rotateScale("a5009", 0, 320, 150, 320, 1, 1, 0, 0, 0, 1, 800, 800, 0, 4);
     rotateScale("a5011", 310, 335, 310, 335, 1, 1, 0, 0, 0, 1, 800, 800, 0, 4);
@@ -910,23 +909,36 @@ function dh51() {
 	// 	rotateScale("a5013", 361, 590, 361, 590, 0, 1, 0, 0, 0, 1, 700, 3600, 0, 1);
 	// 	rotateScale("a5014", 363, 685, 363, 685, 0, 1, 0, 0, 0, 1, 700, 3600, 0, 1);
 	// }, 1500);
-	// cjqihuan(51);
+	cjqihuan(51);
 }
 
 function dh52() {
 	$("#page52").fadeIn(500);
-	setTimeout(function() {
-		$("#a5017").attr("class", "xzbj");
-	}, 500);
+	$("#a5004").fadeOut(4000);
+    rotateScale("a5017", 180, 575, 180, 575, 1, 1, 0, 0, 0, 1, 400, 400, 0, 4);
+	setTimeout(function () {
+        $("#a5003").fadeOut(4000);
+        $("#a5002").fadeOut(1800);
+        rotateScale("a5018", 545, 420, 515, 420, 1, 1, 0, 0, 0, 1, 400, 800, 0, 1);
+        rotateScale("a5020", 180, 320, 180, 320, 1, 1, 0, 0, 0, 1, 1200, 400, 0, 4);
+        rotateScale("a5021", 305, 450, 150, 500, 1, 1, 0, 250, 0, 1, 400, 1300, 0, 4);
+        rotateScale("a5019", 450, 200, 450, 200, 1, 1, 0, 0, 0, 1, 800, 800, 0, 2);
+    },2500);
 
-	setTimeout(function() {
-		justOpacity("a5018", 0, 1, 600, 300, 4);
-		justOpacity("a5019", 0, 1, 600, 300, 4);
-		rotateScale("a5020", 420, 260, 420, 260, 0, 1, 0, 0, 0, 1, 700, 1200, 0, 1);
-		rotateScale("a5023", 200, 800, 270, 870, 0, 1, 0, 0, 0, 1, 700, 2000, 0, 1);
-		rotateScale("a5021", 320, 370, 320, 370, 1, 1, 0, 0, 0, 1, 700, 2500, 0, 1);
-		rotateScale("a5022", 330, 515, 330, 515, 1, 1, 0, 0, 0, 1, 700, 2500, 0, 1);
-	}, 1000);
+    rotateScale("a5021", 305, 450, 305, 450, 1, 1, 0, 0, 0, 1, 800, 1300, 0, 4);
+
+	// setTimeout(function() {
+	// 	$("#a5017").attr("class", "xzbj");
+	// }, 500);
+    //
+	// setTimeout(function() {
+	// 	justOpacity("a5018", 0, 1, 600, 300, 4);
+	// 	justOpacity("a5019", 0, 1, 600, 300, 4);
+	// 	rotateScale("a5020", 420, 260, 420, 260, 0, 1, 0, 0, 0, 1, 700, 1200, 0, 1);
+	// 	rotateScale("a5023", 200, 800, 270, 870, 0, 1, 0, 0, 0, 1, 700, 2000, 0, 1);
+	// 	rotateScale("a5021", 320, 370, 320, 370, 1, 1, 0, 0, 0, 1, 700, 2500, 0, 1);
+	// 	rotateScale("a5022", 330, 515, 330, 515, 1, 1, 0, 0, 0, 1, 700, 2500, 0, 1);
+	// }, 1000);
 	cjqihuan(52);
 }
 
@@ -935,28 +947,37 @@ function dh53() {
 	setTimeout(function() {
 		$("#a5024").attr("class", "xzbj");
 	}, 500);
-	setTimeout(function() {
-		rotateScale("a5025", 0, 350, 0, 450, 1, 1, 0, 0, 0, 1, 700, 200, 0, 4);
-		rotateScale("a5026", 0, 490, 0, 590, 1, 1, 0, 0, 0, 1, 700, 200, 0, 4);
-		justOpacity("a5032", 0, 1, 300, 1000, 4);
-		justOpacity("a5031", 0, 1, 300, 1000, 4);
-		justOpacity("a5027", 0, 1, 1000, 1300, 4);
-		justOpacity("a5028", 0, 1, 1000, 1800, 4);
-		justOpacity("a5029", 0, 1, 1000, 4600, 4);
-		justOpacity("a5030", 0, 1, 1000, 5000, 4);
-		rotateScale("a5033", 370, 490, 340, 590, 0, 1, 0, 0, 0, 1, 500, 5800, 0, 4);
-		rotateScale("a5034", 350, 850, 270, 870, 0, 1, 0, 0, 0, 1, 500, 7000, 0, 1);
-	}, 1500);
+	setTimeout(function () {
+        rotateScale("a5026", -640, 530, 0, 530, 1, 1, 0, 0, 0, 1, 500, 400, 0, 4);
+        rotateScale("a5025", 640, 0, 216, 0, 1, 1, 0, 0, 0, 1, 900, 800, 0, 4);
+        rotateScale("a5029", -424, 530, 216, 530, 1, 1, 0, 0, 0, 1, 900, 800, 0, 4);
+    },1000);
+
+
+	// setTimeout(function() {
+	// 	rotateScale("a5025", 0, 350, 0, 450, 1, 1, 0, 0, 0, 1, 700, 200, 0, 4);
+	// 	rotateScale("a5026", 0, 490, 0, 590, 1, 1, 0, 0, 0, 1, 700, 200, 0, 4);
+	// 	justOpacity("a5032", 0, 1, 300, 1000, 4);
+	// 	justOpacity("a5031", 0, 1, 300, 1000, 4);
+	// 	justOpacity("a5027", 0, 1, 1000, 1300, 4);
+	// 	justOpacity("a5028", 0, 1, 1000, 1800, 4);
+	// 	justOpacity("a5029", 0, 1, 1000, 4600, 4);
+	// 	justOpacity("a5030", 0, 1, 1000, 5000, 4);
+	// 	rotateScale("a5033", 370, 490, 340, 590, 0, 1, 0, 0, 0, 1, 500, 5800, 0, 4);
+	// 	rotateScale("a5034", 350, 850, 270, 870, 0, 1, 0, 0, 0, 1, 500, 7000, 0, 1);
+	// }, 1500);
 	cjqihuan(53);
 }
 
 
 function dh5() {
-    rotateScale("a5003", 180, 0, 180, 320, 1, 1, 0, 0, 0, 1, 800, 1300, 0, 4);
-    rotateScale("a5004", 180, 1000, 180, 600, 1, 1, 0, 0, 0, 1, 800, 800, 0, 4);
+    rotateScale("a5003", 180, 120, 180, 320, 1, 1, 0, 0, 0, 1, 800, 1300, 0, 4);
+    rotateScale("a5004", 180, 800, 180, 600, 1, 1, 0, 0, 0, 1, 800, 800, 0, 4);
+
+    rotateScale("a5002", 305, 250, 305, 450, 1, 1, 0, 0, 0, 1, 800, 1300, 0, 4);
 
     setTimeout(function() {
-        rotateScale("a5002", 255, 450, 305, 450, 1, 1, 60, 0, 0, 1, 600, 400, 0, 4);
+        // rotateScale("a5002", 255, 450, 305, 450, 1, 1, 60, 0, 0, 1, 600, 400, 0, 4);
         rotateScale("a5005", 450, 200, 450, 200, 1, 1, 0, 0, 0, 1, 800, 800, 0, 2);
     	$("#timu5").fadeIn(500);
     	rotateScale("a1008a3", 100, 100, 100, 100, 0, 1, 0, 0, 0, 1, 500, 400, 0, 1);

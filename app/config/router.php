@@ -44,6 +44,14 @@ $router->add(
     ]
 );
 
+$router->add(
+    '/huanyuhui/c/subScore',
+    [
+        'controller' => 'index',
+        'action' => 'subScore'
+    ]
+);
+
 $router->add('/admin', [
     'controller' => 'admin',
     'action' => 'index'

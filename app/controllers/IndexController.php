@@ -119,5 +119,15 @@ class IndexController extends ControllerBase
         }';
         exit;
     }
+
+    public function subScoreAction()
+    {
+        echo '{
+	        "code": 0,
+	        "isVip": 0,
+	        "hasMoney": true
+        }';
+        exit;
+    }
 }
 
