@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type">
 	<meta content="text/html; charset=utf-8">
 	<meta charset="utf-8">
-	<title>戏精，站住！这里有道送分题！</title>
+	<title>中海婚介所，爱情专家为你解答春节前你能否脱单？</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="email=no">
@@ -16,7 +16,7 @@
 	<div id="jiazai" style="display: block;">
 		<img src="img/timg.gif" id="jz001" class="xzfs">
 		<div id="logodiv" style="position: absolute;width: 150%;text-align: center;font-size: 10px;bottom:48%;right: 20%" class="xzfs">
-			-全程数字营销·橙意机构-
+			-Devision迪威信文化传播-
 		</div>
 	</div>
 	<div id="content" style="display: none">
@@ -27,10 +27,10 @@
 			</div>
 			<img src="img2/103.png"     id="b1003"  style="position: absolute;opacity:0"/>
 			<img src="img2/104.png"     id="b1004"  style="position: absolute;opacity:0"/>
-			<img src="img2/105.png"     id="b1005"  style="position: absolute;opacity:0"/>
-			<img src="img2/106.png"     id="b1006"  style="position: absolute;opacity:0"/>
+			
+			
 			<img src="img2/102.png"     id="b1007"  style="position: absolute;opacity:0" class="yy"/>
-			<img src="img3/109.png"     id="b1008"  style="position: absolute;opacity:0" class="yy"/>
+			
 		</div>
 
 		<div id="page1" style="display: none">
@@ -313,84 +313,122 @@
 		</div>
 		<div id="page8" style="display: none">
 			<img src="img2/107.png"          id="b8001"  style="position: absolute;"/>
-			<div id="page81" style="display: none">
-				<img src="img3/1001.png"     id="b8002"  style="position: absolute;"/>
-				<img src="img3/1002.png"     id="b8003"  style="position: absolute;opacity:1"/>
-				<img src="img3/1003.png"     id="b8001a"  style="position: absolute;opacity:1"/>
-				<img src="img3/1004.png"     id="b8001b"  style="position: absolute;opacity:1"/>
-				<img src="img3/1005.png"     id="b8001c"  style="position: absolute;opacity:1"/>
-				<div id="b8001d1"  style="position: absolute;opacity:1">
-					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
-				</div>
-				<div id="b8001d2"  style="position: absolute;opacity:1">
-					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
-				</div>
-				<div id="b8001d3"  style="position: absolute;opacity:1">
-					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
-				</div>
-				<div id="b8001d4"  style="position: absolute;opacity:1">
-					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
-				</div>
-				<div id="b8001d5"  style="position: absolute;opacity:1">
-					<img src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;"    />
+			<img src="img3/107-2.png"          id="b8001a"  style="position: absolute;"/>
+			<img src="img3/107-3.png"     id="b8002"  style="position: absolute;"/>
+			<div id="page81" style="display: block">
+
+				<img src="img3/1001.png"     id="b8003"  style="position: absolute;opacity:0"/>
 				</div>
 
 			</div>
 			<div id="page82" style="display: none">
-				<img src="img3/2001.png"     id="b8002a"  style="position: absolute;"/>
-				<img src="img3/2002.png"     id="b8003a"  style="position: absolute;opacity:0"/>
+				<img src="img3/2001.png"     id="b8003a"  style="position: absolute;opacity: 0"/>
+				
 			</div>
 			<div id="page83" style="display: none">
-				<img src="img3/3001.png"     id="b8002a1"  style="position: absolute;"/>
-				<img src="img3/3002.png"     id="b8003a1"  style="position: absolute;opacity:0"/>
+				<img src="img3/3001.png"     id="b8003a1"  style="position: absolute;opacity: 0"/>
+				
 			</div>
 			<div id="page84" style="display: none">
-				<img src="img3/4001.png"     id="b8002a2"  style="position: absolute;"/>
-				<img src="img3/4002.png"     id="b8003a2"  style="position: absolute;opacity:0"/>
+				<img src="img3/4001.png"     id="b8003a2"  style="position: absolute;opacity: 0"/>
+				
 			</div>
 			<div id="page85" style="display: none">
-				<img src="img3/5001.png"     id="b8002a3"  style="position: absolute;"/>
-				<img src="img3/5002.png"     id="b8003a3"  style="position: absolute;opacity:0"/>
+				<img src="img3/5001.png"     id="b8003a3"  style="position: absolute;opacity: 0"/>
+				
 			</div>
 			<div id="page86" style="display: none">
-				<img src="img3/6001.png"     id="b8002a4"  style="position: absolute;"/>
-				<img src="img3/6002.png"     id="b8003a4"  style="position: absolute;opacity:0"/>
+				<img src="img3/6001.png"     id="b8003a4"  style="position: absolute;opacity: 0"/>
+				
 			</div>
-			<div id="fensunumber" style="
-			position: absolute;
-			 text-align: center;
-			 color:red;
-			 font-size: 80px;
-			 font-weight: bold;
-			 width: 1060px;
-			 height: 100px;
-			 left: -410px;
-			 top: 150px;">
-				0
-			</div>
+
 			<div id="andiv" style="display: none">
-				<img src="img3/109.png"     id="b8004"  style="position: absolute;" class="yy"/>
-				<img src="img3/110.png"     id="b8005"  style="position: absolute;" class="yy"/>
-				<img src="img/yshy.png"     id="b8006"  style="position: absolute;" class="yy"/>
-				<img src="img/ljck.png"     id="b8007"  style="position: absolute;" class="yy"/>
+				<img src="img3/109.png"     id="b8004"  style="position: absolute;" />
+				<img src="img3/110.png"     id="b8005"  style="position: absolute;" />
+				
+				
 			</div>
+			<img src="img3/107-4.png"     id="b8010"  style="position: absolute;opacity: 0"/>
 		</div>
+
+
+
+
 
 		<img src="img/logo01.png"  id="logo1"  style="position: absolute;"/>
 
 		<div id="page9" style="display: none">
-			<img src="img2/107.png"         id="b9001"  style="position: absolute;"/>
-			<img src="img/1003.png"         id="b9003"  style="position: absolute;"/>
+			<img src="img3/8a1001.png"         id="b9001"  style="position: absolute;"/>
+
+			
 			<img src="img/1001.png"         id="b9002"  style="position: absolute;"/>
 			<img src="img/1002.png"         id="b9004"  style="position: absolute;"/>
-			<img src="img/a1003a.png"       id="b9004a"  style="position: absolute;"/>
-			<div id="yzmdjsdiv" style="position: absolute;font-size: 10px;color: red;display: none">
-				<span id="yzmdjspan">60</span>s后重新发送
-			</div>
-			<input type="text" id="namestr"   style="position: absolute;text-align: center;" value="" class="inputclass1"/>
-			<input type="tel"  id="phonestr"  style="position: absolute;text-align: center;" value="" class="inputclass1"/>
-			<input type="tel"  id="yzmstr"  value=""   style="position: absolute;text-align: center;" value="" class="inputclass1"/>
 
+			<img id="b9003" src="img3/0.jpg" style="width: 120px; height: 120px;border-radius:15px;position: absolute;opacity:1"    />
+			
+			
+				
+			
+			<input type="text" id="agestr"   style="position: absolute;text-align: left;" value="" class="inputclass1"/>
+			<input type="text" id="namestr"   style="position: absolute;text-align: left;" value="" class="inputclass1"/>
+			<input type="text" id="petstr"   style="position: absolute;text-align: left;" value="无" class="inputclass1"/>
+			<textarea id="storystr" style="position: absolute;text-align: left;" class="inputclass1"></textarea>
+
+			<input type="tel"  id="phonestr"  style="position: absolute;text-align: center;" value="" class="inputclass1"/>
+			
+
+		</div>
+		<div id="page8a" style="display: none">
+			<img src="img2/107.png"          id="b8a001"  style="position: absolute;"/>
+			<div id="page8a1" style="display: block">
+				<img src="img3/8a1001.png"     id="b8a002"  style="position: absolute;"/>
+				<img src="img3/8a1002.png"     id="b8a003"  style="position: absolute;opacity:1"/>
+				<img src="img3/8a1003.png"     id="b8a001a"  style="position: absolute;opacity:1"/>
+				<img src="img3/8a1004.png"     id="b8a001b"  style="position: absolute;opacity:1"/>
+				<img src="img3/8a1005.png"     id="b8a001c"  style="position: absolute;opacity:1"/>
+
+				<img id="b8a001d1" data-id="1" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d2" data-id="2" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d3" data-id="3" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d4" data-id="4" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d5" data-id="5" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+			</div>
+			<div id="page8a2" style="display: none">
+				<img src="img3/8a1001.png"     id="b8a004"  style="position: absolute;"/>
+				<img src="img3/8a1002.png"     id="b8a005"  style="position: absolute;opacity:1"/>
+				<img src="img3/ppcg.png"     id="b8a006"  style="position: absolute;opacity:1"/>
+				<img src="img3/b8a001bb.png"     id="b8a007"  style="position: absolute;opacity:1"/>
+				<img src="img3/8a1005.png"     id="b8a008"  style="position: absolute;opacity:1"/>
+				<img src="img3/mmm.png" id="b8a010"  style="position: absolute;opacity:1"/>
+				<img id="b8a009a"  src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a009b"  src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+
+			</div>
+
+			<div id="page8a3" style="display: none">
+				<img src="img3/8a1001.png"     id="b8a011"  style="position: absolute;"/>
+				<img src="img3/8a1002.png"     id="b8a012"  style="position: absolute;opacity:1"/>
+				<img src="img3/8a1005.png"     id="b8a013"  style="position: absolute;opacity:1"/>
+				<img src="img3/giftbox.png"     id="b8a014"  style="position: absolute;opacity:1"/>
+				<img src="img3/8a1007.png"     id="b8a015"  style="position: absolute;opacity:1"/>
+			</div>
+
+			<div id="fensunumber" style="
+			position: absolute;
+			 text-align: center;
+			 color:red;
+			 font-size: 40px;
+			 font-weight: bold;
+			 width: 1060px;
+			 height: 100px;
+			 left: -420px;
+			 top: 150px;
+			font-style:italic;">60
+			</div>
+		</div>
+		<div id="page8b" style="display: none">
+			<img src="img/zhezhao.png" id="b8b001" style="position:absolute;" />
+			<img src="img/zj1.gif"     id="b8b002" style="position:absolute;" />
 		</div>
 		<div id="page10" style="display: none">
 			<img src="img/zz1.png"     id="b10001"  style="position: absolute;"/>
@@ -457,7 +495,7 @@
 			<img src="img/dgdfg01.png"  id="b13002"  style="position: absolute;"/>
 		</div>
 	</div>
-	<audio src="music/bg.mp3" loop="loop" id="bgmusic">
+	
 	</audio>
 </div>
 
@@ -474,7 +512,7 @@
 <script type="text/javascript" src="js/resLoader.js"></script>
 <script type="text/javascript" src="js/nbajax.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
 <script>
 
     init({
@@ -483,7 +521,7 @@
             backInfo.title  =  title;
             backInfo.link   = "http://mchobits.s3.natapp.cc/";
             backInfo.imgUrl =  imgUrl;
-            backInfo.desc   = "​不仅是送分题还有红包送哟~";
+            backInfo.desc   = "2月14日佛山中海环宇城，“一日情侣”活动，2018你要来找那个ta吗?";
             return backInfo;
         }
     });
@@ -491,13 +529,58 @@
     var musicmm = document.getElementById("bgmusic");
     document.addEventListener("WeixinJSBridgeReady", function () {
         WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-            musicmm.play();
+            /*musicmm.play();*/
         });
+
+
     }, false);
 
+    var images = {
+        localId: [],
+        serverId: []
+    };
+    wx.ready(function () {
+        $("#b9003").on("click", function () {
+            wx.chooseImage({
+                count: 1,
+                sizeType: ['original'],
+                sourceType: ['album'],
+                success: function (result) {
+					console.log(result.localIds[0]);
+                    images.localId = result.localIds;
+                    alert(result.localIds[0]);
+                    function upload() {
+                        wx.uploadImage({
+                            localId: images.localId[0],
+                            isShowProgressTips: 1,
+                            success: function(res) {
+                                alert(res.serverId);
+                                images.serverId.push(res.serverId);
+								wx.downloadImage({
+									serverId: res.serverId,
+									isShowProgressTips: 1,
+									success: function (res) {
+									    alert(res.localId);
+                                        $("#b9003").attr("src", res.localId);
+										var localId = res.localId;
+									}
+								});
+
+                            },
+                            fail: function(res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                    }
+                    upload();
+
+                }
+            });
+        });
+    });
     var url = window.location.href;
     if(url.split("from").length>=2){
-        window.location.href="http://mchobits.s3.natapp.cc/huanyuhui/c/i";
+        window.location.href="http://mchobits.s3.natapp.cc/";
     };
 
     document.addEventListener("touchmove", function(event){

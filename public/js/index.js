@@ -28,9 +28,9 @@ var ajax = new Ajax("http://mchobits.s3.natapp.cc/huanyuhui/c/", {
 	tid: 28
 });
 
-var title = "戏精,站住！这里有道送分题！";
+var title = "中海婚介所，爱情专家为你解答春节前你能否脱单？";
 var namehq = "";
-var imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img/fx.jpg";
+var imgUrl = "http://mchobits.s3.natapp.cc/img2/fx.png";
 ajax.send("initMsg", {}, function(data) {
 	namehq = data.nickname;
 });
@@ -279,59 +279,109 @@ function jiazaibiu() {
         sale(410, 660, "a6004");
         sale(0, 0, "a6005");
         sale(0, 400, "a6006");
+        sale(210, 590, "a6007");
+        sale(310, 690, "a6008");
+        sale(410, 290, "a6009");
+        sale(410, 660, "a6010");
+        sale(138, 639, "a6011");
+        sale(250, 350, "a6012");
+        sale(70,350, "a6013");
+        sale(70,500, "a6014");
 
 		sale(0, 0, "b1001");
-		sale(0, 0, "b1002");
-		sale(520, 25, "b1003");
-		sale(120, 85, "b1004");
-		sale(420, 900, "b1005");
-		sale(50, 900, "b1006");
-		sale(20, 220, "b1007");
-		sale(20, 620, "b1008");
+		sale(219, 0, "b1002");
+		sale(208, 140, "b1003");
+		sale(230, 454, "b1004");
+		//sale(420, 900, "b1005");
+		//sale(50, 900, "b1006");
+		sale(20, 260, "b1007");
+		// sale(20, 620, "b1008");
 		/*rotateScale("a2005",-400,-300,-580,-450,0.5,1,0,0,1,1,0,0,0,4);*/
 		salekj(0, 0, "kj");
 
 		sale(0, 0, "a7001");
 		sale(0, 500, "a7002");
-		sale(0, 0, "b8001");
 
-		sale(0, 0, "b8002");
-		sale(259, 63, "b8003");
-        sale(70, 349, "b8001a");
-        sale(70, 480, "b8001b");
-        sale(70, 170, "b8001c");
+        sale(0, 0, "b8001");
+        sale(132, 0, "b8001a");
+        sale(-546, 616, "b8002");
+        //sale(-3, 616, "b8002");
+        sale(225, 700, "b8003");
+        // sale(70, 349, "b8001a");
+        // sale(70, 480, "b8001b");
+        // sale(70, 170, "b8001c");
 
-        sale(163, 575, "b8001d1");
-        sale(382, 575, "b8001d2");
-        sale(113, 770, "b8001d3");
-        sale(273, 770, "b8001d4");
-        sale(436, 770, "b8001d5");
 
-		sale(50, 40, "b8002a");
-		sale(250, 700, "b8003a");
-		sale(50, 40, "b8002a1");
-		sale(250, 700, "b8003a1");
-		sale(50, 40, "b8002a2");
-		sale(250, 700, "b8003a2");
-		sale(50, 40, "b8002a3");
-		sale(250, 700, "b8003a3");
-		sale(50, 40, "b8002a4");
-		sale(250, 700, "b8003a4");
-		salefs(-410, 150, "fensunumber");
-		sale(10, 200, "b8004");
-		sale(0, 500, "b8005");
-		sale(10, 610, "b8006");
-		sale(10, 610, "b8007");
+		//sale(50, 40, "b8002a");
+		sale(-3, 700, "b8003a");
+		//sale(50, 40, "b8002a1");
+		sale(-3, 700, "b8003a1");
+		//sale(50, 40, "b8002a2");
+		sale(-3, 700, "b8003a2");
+		//sale(50, 40, "b8002a3");
+		sale(-3, 700, "b8003a3");
+		//sale(50, 40, "b8002a4");
+		sale(-3, 700, "b8003a4");
+		salefs(-420, 150, "fensunumber");
+		sale(-3, 628, "b8004");
+		sale(-3, 650, "b8005");
+		//sale(10, 610, "b8006");
+		//sale(10, 610, "b8007");
+
+        sale(0, 0, "b8a001");
+        sale(0, 0, "b8a002");
+        sale(259, 63, "b8a003");
+        sale(70, 349, "b8a001a");
+        sale(70, 480, "b8a001b");
+        sale(70, 170, "b8a001c");
+
+        saleSTou(163, 575, "b8a001d1");
+        saleSTou(382, 575, "b8a001d2");
+        saleSTou(113, 770, "b8a001d3");
+        saleSTou(273, 770, "b8a001d4");
+        saleSTou(436, 770, "b8a001d5");
+
+        sale(0, 0, "b8a004");
+        sale(259, 63, "b8a005");
+        sale(100, 349, "b8a006");
+        sale(70, 480, "b8a007");
+
+        sale(70, 170, "b8a008");
+        saleSTou(163, 575, "b8a009a");
+        saleSTou(382, 575, "b8a009b");
+        //sale(70, 170, "b8a009");
+        sale(200, 700, "b8a010");
+
+        sale(0, 0, "b8a011");
+        sale(259, 63, "b8a012");
+        //sale(70, 480, "b8a001b");
+
+        sale(70, 170, "b8a013");
+        sale(220, 470, "b8a014");
+        sale(169, 709, "b8a015");
+
+        sale(0, 0, "b8b001");
+        sale(0, 400, "b8b002");
+
+        // sale(70, 480, "b8a001bb");
+        // sale(200, 700, "b8a001ba");
+        // sale(70, 349, "b8a001bc");
+
+        sale(35,-400,"b8010");
 
 		sale(0, 0, "b9001");
-		sale(20, 300, "b9002");
-		sale(55, 520, "b9003");
-		sale(140, 630, "b9004");
-		sale(440, 450, "b9004a");
-		saledjs(440, 460, "yzmdjsdiv");
-		saleinput(230, 340, "namestr");
-		saleinput(230, 430, "phonestr");
-		saleinput(230, 530, "yzmstr");
+		sale(51, 67, "b9002");
+        saleDTou(83, 165, "b9003");
+		//sale(55, 520, "b9003");
+		sale(237, 900, "b9004");
+		// sale(440, 450, "b9004a");
+		//saledjs(440, 320, "yzmdjsdiv");
+        saleinputShort(330, 250, "agestr");
+        saleinputShort(330, 175, "namestr");
+		saleinput(190, 310, "phonestr");
+        saleinput(190, 375, "petstr");
+        saletextarea(95,620,"storystr");
+		//saleinput(230, 530, "yzmstr");
 
 		sale(0, 0, "b10001");
 		sale(0, 30, "b10002");
@@ -358,18 +408,60 @@ function jiazaibiu() {
 		sale(30, 30, "logo3");
 		/*startdh();*/
 		/*paihangbang();*/
-		dh888(1);
+		//dh888(1);
 		salediv(0, 0, "all");
+        $("#page9").fadeIn(500);
 		/*$("#b8004,#b8005,#b8006,#b8007").fadeOut(500);
-		
+
 		$("#b8004,#b8007").fadeIn(500);*/
+		// $("#page8a").fadeIn(500);
+		// $("#page9").fadeIn(500);
+		//leftAndRight("b1003",-1,1,500);
 
 	}
 
 	/*startdh();*/
 }
 
+wx.ready(function () {
+    $("#b9003").on("click", function () {
+        wx.chooseImage({
+            count: 1,
+            sizeType: ['original'],
+            sourceType: ['album'],
+            success: function (result) {
+                console.log(result.localIds[0]);
+                images.localId = result.localIds;
+                alert(result.localIds[0]);
+                function upload() {
+                    wx.uploadImage({
+                        localId: images.localId[0],
+                        isShowProgressTips: 1,
+                        success: function(res) {
+                            alert(res.serverId);
+                            images.serverId.push(res.serverId);
+                            wx.downloadImage({
+                                serverId: res.serverId,
+                                isShowProgressTips: 1,
+                                success: function (res) {
+                                    alert(res.localId);
+                                    $("#b9003").attr("src", res.localId);
+                                    var localId = res.localId;
+                                }
+                            });
 
+                        },
+                        fail: function(res) {
+                            alert(JSON.stringify(res));
+                        }
+                    });
+                }
+                upload();
+
+            }
+        });
+    });
+});
 
 function paihangbang() {
 	ajax.send("randList", {}, function(data) {
@@ -422,68 +514,79 @@ function paihangbang() {
 
 function dh888(typenumber) {
 	$("#page8").fadeIn(500);
+    leftAndRight("b8004",-1.1,1.1,1500);
+    leftAndRight("b8005",-1.12,1.12,1500);
+    leftAndRight("b8002",-1,1,1500);
 
 	if (typenumber == 1) {
         dh8a1();
-    }
-	// } else if (typenumber == 2) {
-	// 	dh8a2();
-	// } else if (typenumber == 3) {
-	// 	dh8a3();
-	// } else if (typenumber == 4) {
-	// 	dh8a4();
-	// } else if (typenumber == 5) {
-	// 	dh8a5();
-	// } else if (typenumber == 6) {
-	// 	dh8a6();
-	// }
+	} else if (typenumber == 2) {
+		dh8a2();
+	} else if (typenumber == 3) {
+		dh8a3();
+	} else if (typenumber == 4) {
+		dh8a4();
+	}
+    upAndDown("b8010",100,320,3000);
 
-	// setTimeout(function() {
-	// 	$("#andiv").fadeIn(500);
-	// }, 1500);
+
+    setTimeout(function() {
+        rotateScale("b8010", 35, 300, 35, 300, 1.8, 1, 0, 0, 0, 1, 1300, 0, 0, 1);
+        //$("#b8010").fadeIn(500);
+    }, 2000);
+
+	setTimeout(function() {
+		$("#andiv").fadeIn(500);
+	}, 1500);
 }
 
 function dh8a1() {
 	$("#page81").fadeIn(500);
-	// setTimeout(function() {
-	// 	rotateScale("b8003", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
-	// }, 600);
+    leftAndRight("b8003",-1.2,1.2,1500);
+	setTimeout(function() {
+		rotateScale("b8003", -3, 700, -3, 700, 1.8, 1, 0, 0, 0, 1, 1300, 0, 0, 1);
+	}, 600);
 }
 
 function dh8a2() {
 	$("#page82").fadeIn(500);
+    leftAndRight("b8003a",-1.2,1.2,1500);
 	setTimeout(function() {
-		rotateScale("b8003a", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
+		rotateScale("b8003a", -3, 700, -3, 700, 1.8, 1, 0, 0, 0, 1, 300, 0, 0, 1);
 	}, 600);
 }
 
 function dh8a3() {
 	$("#page83").fadeIn(500);
+    leftAndRight("b8003a1",-1.2,1.2,1500);
 	setTimeout(function() {
-		rotateScale("b8003a1", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
+		rotateScale("b8003a1", -3, 700, -3, 700, 1.8, 1, 0, 0, 0, 1, 300, 0, 0, 1);
 	}, 600);
 }
 
 function dh8a4() {
 	$("#page84").fadeIn(500);
+    leftAndRight("b8003a2",-1.2,1.2,1500);
 	setTimeout(function() {
-		rotateScale("b8003a2", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
+		rotateScale("b8003a2", -3, 700, -3, 700, 1.8, 1, 0, 0, 0, 1, 300, 0, 0, 1);
 	}, 600);
 }
 
-function dh8a5() {
-	$("#page85").fadeIn(500);
-	setTimeout(function() {
-		rotateScale("b8003a3", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
-	}, 600);
-}
+// function dh8a5() {
+// 	$("#page85").fadeIn(500);
+//     leftAndRight("b8003a3",-1.2,1.2,1500);
+// 	setTimeout(function() {
+// 		rotateScale("b8003a3", -3, 700, -3, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
+// 	}, 600);
+// }
 
-function dh8a6() {
-	$("#page86").fadeIn(500);
-	setTimeout(function() {
-		rotateScale("b8003a4", 350, 700, 250, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
-	}, 600);
-}
+// function dh8a6() {
+// 	$("#page86").fadeIn(500);
+//     leftAndRight("b8003a4",-1.2,1.2,1500);
+// 	setTimeout(function() {
+// 		rotateScale("b8003a4", -3, 700, -3, 700, 1.8, 1, 0, 0, 1, 1, 300, 0, 0, 1);
+// 	}, 600);
+// }
 
 //留级重考
 $("#b8007,#b12005").on("click", function() {
@@ -509,14 +612,15 @@ $("#b8006").on("click", function() {
 });
 
 
-//关闭排行榜页面
+
 $("#b10004").on("click", function() {
 	$("#page10").fadeOut(500);
 });
 
-//查看排行版
+
 $("#b8004").on("click", function() {
-	paihangbang();
+	$("#page8a").fadeIn(500);
+    $("#page8a3").fadeIn(500);
 });
 
 //打开信息登记页面
@@ -565,19 +669,33 @@ $("#b1007").on("click", function() {
 
 //提交注册信息
 $("#b9004").on("click", function() {
+	var agestr = document.getElementById("agestr").value;
 	var namestr = document.getElementById("namestr").value;
 	var phonestr = document.getElementById("phonestr").value;
-	var yzmcode = document.getElementById("yzmstr").value;
+	var petstr = document.getElementById("petstr").value;
+    var storystr = document.getElementById("storystr").value;
+	//var yzmcode = document.getElementById("yzmstr").value;
 
-	if (namestr == "" || phonestr == "") {
-		alert("请输入完整的注册信息");
+	if (namestr == "") {
+		alert("请输入您的真实姓名。");
 		return;
 	}
+    if (phonestr == "") {
+        alert("请输入您的联系电话以便工作人员联系。");
+        return;
+    }
+    if (agestr == "") {
+        alert("请输入您的年龄");
+        return;
+    }
+    if (petstr == "") {
+        petstr = "无";
+    }
 
-	if (yzmcode == "") {
-		alert("请输入验证码~");
-		return;
-	}
+	// if (yzmcode == "") {
+	// 	alert("请输入验证码~");
+	// 	return;
+	// }
 
 	var telReg = !! phonestr.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/);
 	//如果手机号码不能通过验证
@@ -590,19 +708,23 @@ $("#b9004").on("click", function() {
 	ajax.send("register", {
 		phone: phonestr,
 		nickName: namestr,
-		authCode: yzmcode
+		age: agestr,
+		pet: petstr,
+		story: storystr
+		//authCode: yzmcode
 	}, function(data) {
-		ajax.send("getHb", {
-			phone: phonestr,
-			nickName: namestr
-		}, function(data) {
-			if (data.money > 0) {
-				$("#hbnumber").html(data.money / 100 + "元");
-				$("#page11").fadeIn(500);
-			} else {
-				$("#page12").fadeIn(500);
-			}
-		});
+		// ajax.send("getHb", {
+		// 	phone: phonestr,
+		// 	nickName: namestr
+		// }, function(data) {
+		// 	if (data.money > 0) {
+		// 		$("#hbnumber").html(data.money / 100 + "元");
+		// 		$("#page11").fadeIn(500);
+		// 	} else {
+		// 		$("#page12").fadeIn(500);
+		// 	}
+		// });
+		$("#page8a").fadeIn(500);
 	});
 });
 
@@ -616,12 +738,13 @@ function startdh() {
 		changeHeight("kj", 0, 0, 0, 0, 0, 1060, 1000, 500, 4);
 
 		setTimeout(function() {
-			rotateScale("b1003", 520, 25, 520, 25, 0, 1, 0, 0, 0, 1, 700, 200, 0, 1);
-			rotateScale("b1004", 120, 85, 120, 85, 0, 1, 0, 0, 0, 1, 700, 600, 0, 1);
-			rotateScale("b1005", 420, 900, 420, 900, 0, 1, 0, 0, 0, 1, 700, 1000, 0, 1);
-			rotateScale("b1006", 50, 900, 50, 900, 0, 1, 0, 0, 0, 1, 700, 1400, 0, 1);
-			rotateScale("b1007", 120, 220, 20, 220, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
-			rotateScale("b1008", 120, 620, 20, 620, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
+			//rotateScale("b1003", -3, 140, -3, 140, 0, 1, 0, 0, 0, 1, 700, 200, 0, 1);
+			rotateScale("b1003", 108, 140, 208, 140, 0, 1, 0, 0, 0, 1, 700, 200, 0, 1);
+			rotateScale("b1004", 230, 454, 230, 454, 0, 1, 0, 0, 0, 1, 700, 600, 0, 1);
+			//rotateScale("b1005", 420, 900, 420, 900, 0, 1, 0, 0, 0, 1, 700, 1000, 0, 1);
+			//rotateScale("b1006", 50, 900, 50, 900, 0, 1, 0, 0, 0, 1, 700, 1400, 0, 1);
+			rotateScale("b1007", 120, 260, 20, 260, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
+			//rotateScale("b1008", 120, 620, 20, 620, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
 		}, 1500);
 	}, 1000);
 }
@@ -636,7 +759,7 @@ function cjqihuan(number) {
 			stopAll();
 			musicmm.pause();
 		}, a11time);
-		ceshifs = ceshifs + 15;
+		ceshifs = ceshifs + 10;
 	} else if (number == 12) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
@@ -644,7 +767,7 @@ function cjqihuan(number) {
 			stopAll();
 			musicmm.pause();
 		}, a12time);
-		ceshifs = ceshifs + 10;
+		ceshifs = ceshifs + 0;
 	} else if (number == 13) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
@@ -652,56 +775,56 @@ function cjqihuan(number) {
 			stopAll();
 			musicmm.pause();
 		}, a13time);
-		ceshifs = ceshifs + 20;
+		ceshifs = ceshifs + 15;
 	} else if (number == 21) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
 		}, a21time);
-		ceshifs = ceshifs + 20;
+		ceshifs = ceshifs + 10;
 	} else if (number == 22) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
 		}, a22time);
-		ceshifs = ceshifs + 18;
+		ceshifs = ceshifs + 20;
 	} else if (number == 23) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
 		}, a23time);
-		ceshifs = ceshifs + 18;
+		ceshifs = ceshifs + 5;
 	} else if (number == 31) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
 		}, a31time);
-		ceshifs = ceshifs + 15;
+		ceshifs = ceshifs + 10;
 	} else if (number == 32) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
 		}, a32time);
-		ceshifs = ceshifs + 10;
+		ceshifs = ceshifs + 20;
 	} else if (number == 33) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
 		}, a33time);
-		ceshifs = ceshifs + 20;
+		ceshifs = ceshifs + 5;
 	} else if (number == 41) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
 		}, a41time);
-		ceshifs = ceshifs + 20;
+		ceshifs = ceshifs + 15;
 	} else if (number == 42) {
 		setTimeout(function() {
 			$("#page6").fadeIn(500);
@@ -715,25 +838,25 @@ function cjqihuan(number) {
 			zl();
 			stopAll();
 		}, a43time);
-		ceshifs = ceshifs + 15;
+		ceshifs = ceshifs + 25;
 	} else if (number == 51) {
 		setTimeout(function() {
 			$("#page7").fadeIn(500);
 			sfs();
 		}, a51time);
-		ceshifs = ceshifs + 20;
+		ceshifs = ceshifs + 15;
 	} else if (number == 52) {
 		setTimeout(function() {
 			$("#page7").fadeIn(500);
 			sfs();
 		}, a52time);
-		ceshifs = ceshifs + 15;
+		ceshifs = ceshifs + 10;
 	} else if (number == 53) {
 		setTimeout(function() {
 			$("#page7").fadeIn(500);
 			sfs();
 		}, a53time);
-		ceshifs = ceshifs + 10;
+		ceshifs = ceshifs + 20;
 	}
 
 	console.log("ceshifs  == " + ceshifs);
@@ -747,8 +870,6 @@ function sfs() {
 	var typenumber = 0;
 	$("#b8006,#b8005,#b8007").fadeOut(500);
 	var ceshifs12 = ceshifs;
-	ceshifs12 = 100;
-    ceshifs = 100;
 	ajax.send("subScore", {
 		score: ceshifs
 	}, function(data) {
@@ -774,47 +895,64 @@ function sfs() {
 		}
 	});
 
-	if (ceshifs < 60) {
-		ceshifs = ceshifs + "%";
+	if (ceshifs < 48) {
+		//ceshifs = ceshifs + "%";
 		typenumber = 1;
-		title = namehq + "很遗憾,你的戏精指数不及格,职场险恶,建议您回炉重造！";
-		imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/1002.png";
-	} else if (ceshifs >= 60 && ceshifs < 70) {
-		ceshifs = ceshifs + "%";
+		//title = namehq + "很遗憾,你的戏精指数不及格,职场险恶,建议您回炉重造！";
+		//imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/1002.png";
+	} else if (ceshifs >= 48 && ceshifs < 66) {
+		// ceshifs = ceshifs + "%";
 		typenumber = 2;
-		title = namehq + "的戏精指数为" + ceshifs + ",龙套中的战斗机,一直配合别人演出,不做演员可惜了";
-		imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/2002.png";
-	} else if (ceshifs >= 70 && ceshifs < 80) {
-		ceshifs = ceshifs + "%";
+		//title = namehq + "的戏精指数为" + ceshifs + ",龙套中的战斗机,一直配合别人演出,不做演员可惜了";
+		//imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/2002.png";
+	} else if (ceshifs >= 66 && ceshifs < 84) {
+		// ceshifs = ceshifs + "%";
 		typenumber = 3;
-		title = namehq + "的戏精指数为" + ceshifs + ",恭喜你,可以毕业了！海阔凭鱼跃,天高任你飞";
-		imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/3002.png";
-	} else if (ceshifs >= 80 && ceshifs < 90) {
-		ceshifs = ceshifs + "%";
-		typenumber = 4;
-		title = namehq + " 的戏精指数为" + ceshifs + ",戏精界的闪亮新星,吴x凡,鹿x都红不过你！";
-		imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/4002.png";
-	} else if (ceshifs >= 90 && ceshifs < 100) {
-		ceshifs = ceshifs + "%";
-		typenumber = 5;
-		title = namehq + "的戏精指数为" + ceshifs + ".,戏霸之王就是你,章x怡,梁x伟,还是你的对手吗？";
-		imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/5002.png";
-	} else if (ceshifs >= 100) {
-		ceshifs = ceshifs + "%";
-		typenumber = 6;
-		title = namehq + "的戏精指数为" + ceshifs + ",人民的艺术家,恭喜你收到《戏精的诞生》节目组正式邀约！";
-		imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/6002.png";
-	}
+		//title = namehq + "的戏精指数为" + ceshifs + ",恭喜你,可以毕业了！海阔凭鱼跃,天高任你飞";
+		//imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/3002.png";
+	} else if (ceshifs >= 84 && ceshifs <= 100) {
+        //ceshifs = ceshifs + "%";
+        typenumber = 4;
+        //title = namehq + " 的戏精指数为" + ceshifs + ",戏精界的闪亮新星,吴x凡,鹿x都红不过你！";
+        //imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/4002.png";
+    }
+	// } else if (ceshifs >= 90 && ceshifs < 100) {
+	// 	ceshifs = ceshifs + "%";
+	// 	typenumber = 5;
+	// 	title = namehq + "的戏精指数为" + ceshifs + ".,戏霸之王就是你,章x怡,梁x伟,还是你的对手吗？";
+	// 	imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/5002.png";
+	// } else if (ceshifs >= 100) {
+	// 	ceshifs = ceshifs + "%";
+	// 	typenumber = 6;
+	// 	title = namehq + "的戏精指数为" + ceshifs + ",人民的艺术家,恭喜你收到《戏精的诞生》节目组正式邀约！";
+	// 	imgUrl = "http://www.i-orange-xf.com/zhonghai1208/img3/6002.png";
+	// }
 
 	$("#fensunumber").html(ceshifs);
 
 	setTimeout(function() {
-		// dh888(typenumber);
-		dh888(1);
+		dh888(typenumber);
+		//dh888(1);
 	}, 3000);
 
 
 }
+
+
+$("#b8a014").on("click",function (e) {
+	alert("请于2月14日到中海环宇城领取奖品");
+});
+
+$(".ppdx").on("click", function (e) {
+	console.log($(this).attr("data-id"));
+	$("#page8b").fadeIn(500);
+	setTimeout(function () {
+        $("#page8b").fadeOut(500);
+        $("#page8a1").fadeOut(500);
+        $("#page8a2").fadeIn(500);
+
+    },3000);
+});
 
 function zl() {
 	setTimeout(function() {
@@ -1164,8 +1302,8 @@ function dh3() {
 			rotateScale("a1010a1", 40, 750, 40, 750, 0, 1, 0, 0, 0, 1, 500, 1500, 0, 1);
 		}, 2500);
 	}, 500);
-	playSound("music/bg3.mp3");
-	playSound("music/bg38.mp3");
+	//playSound("music/bg3.mp3");
+	//playSound("music/bg38.mp3");
 }
 
 function dh31() {
@@ -1196,7 +1334,7 @@ function dh31() {
 
 	cjqihuan(31);
 
-	playSound("music/bg38.mp3");
+	//playSound("music/bg38.mp3");
 }
 
 function dh32() {
@@ -1398,7 +1536,7 @@ function dh2() {
 		rotateScale("a1009a", 40, 320, 40, 320, 0, 1, 0, 0, 0, 1, 500, 1000, 0, 1);
 		rotateScale("a1010a", 40, 630, 40, 630, 0, 1, 0, 0, 0, 1, 500, 1500, 0, 1);
 	}, 3500);
-	playSound("music/bg2.mp3");
+	//playSound("music/bg2.mp3");
 }
 
 function dh23() {
@@ -1543,8 +1681,8 @@ function dh1() {
 		}, 3500);
 	}, 1000);
 
-	playSound("music/time.mp3", 3);
-	playSound("music/bg1.mp3", 1);
+	//playSound("music/time.mp3", 3);
+	//playSound("music/bg1.mp3", 1);
 
 }
 
@@ -1637,6 +1775,7 @@ function saleinput(x, y, imgid) {
 
 	var imw = 200;
 	var imh = 40;
+	var fontSize = 25 * sfw;
 
 	imw = imw * sfw;
 	imh = imh * sfh;
@@ -1644,10 +1783,49 @@ function saleinput(x, y, imgid) {
 	x = x * sfw;
 	y = y * sfh;
 
+    document.getElementById(imgid).style["font-size"] = fontSize + "px";
 	document.getElementById(imgid).style.width = imw + "px";
 	document.getElementById(imgid).style.height = imh + "px";
 	document.getElementById(imgid).style.left = x + "px";
 	document.getElementById(imgid).style.top = y + "px";
+}
+
+function saletextarea(x, y, imgid) {
+
+    var imw = 440;
+    var imh = 240;
+    var fontSize = 20 * sfw;
+
+    imw = imw * sfw;
+    imh = imh * sfh;
+
+    x = x * sfw;
+    y = y * sfh;
+
+    document.getElementById(imgid).style["font-size"] = fontSize + "px";
+    document.getElementById(imgid).style.width = imw + "px";
+    document.getElementById(imgid).style.height = imh + "px";
+    document.getElementById(imgid).style.left = x + "px";
+    document.getElementById(imgid).style.top = y + "px";
+}
+
+function saleinputShort(x, y, imgid) {
+
+    var imw = 120;
+    var imh = 35;
+    var fontSize = 25 * sfw;
+
+    imw = imw * sfw;
+    imh = imh * sfh;
+
+    x = x * sfw;
+    y = y * sfh;
+
+    document.getElementById(imgid).style["font-size"] = fontSize + "px";
+    document.getElementById(imgid).style.width = imw + "px";
+    document.getElementById(imgid).style.height = imh + "px";
+    document.getElementById(imgid).style.left = x + "px";
+    document.getElementById(imgid).style.top = y + "px";
 }
 
 function saledjs(x, y, imgid) {
@@ -1688,6 +1866,7 @@ function salefs(x, y, imgid) {
 
 	var imw = 1060;
 	var imh = 100;
+	var fontSize = 80 * sfw;
 
 	imw = imw * sfw;
 	imh = imh * sfh;
@@ -1695,11 +1874,47 @@ function salefs(x, y, imgid) {
 	x = x * sfw;
 	y = y * sfh;
 
+    document.getElementById(imgid).style["font-size"] = fontSize + "px";
 	document.getElementById(imgid).style.width = imw + "px";
 	document.getElementById(imgid).style.height = imh + "px";
 	document.getElementById(imgid).style.left = x + "px";
 	document.getElementById(imgid).style.top = y + "px";
 }
+
+function saleSTou(x, y, imgid) {
+
+    var imw = 100;
+    var imh = 100;
+
+    imw = imw * sfw;
+    imh = imh * sfh;
+
+    x = x * sfw;
+    y = y * sfh;
+
+    document.getElementById(imgid).style.width = imw + "px";
+    document.getElementById(imgid).style.height = imh + "px";
+    document.getElementById(imgid).style.left = x + "px";
+    document.getElementById(imgid).style.top = y + "px";
+}
+
+function saleDTou(x, y, imgid) {
+
+    var imw = 134;
+    var imh = 130;
+
+    imw = imw * sfw;
+    imh = imh * sfh;
+
+    x = x * sfw;
+    y = y * sfh;
+
+    document.getElementById(imgid).style.width = imw + "px";
+    document.getElementById(imgid).style.height = imh + "px";
+    document.getElementById(imgid).style.left = x + "px";
+    document.getElementById(imgid).style.top = y + "px";
+}
+
 
 function salekj(x, y, imgid) {
 
