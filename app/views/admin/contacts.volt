@@ -25,7 +25,7 @@
             {% for member in members %}
             <div class="col-sm-4">
                 <div class="contact-box">
-                    <a href="profile?mid={{ member.id }}">
+                    <a class="J_menuItem" href="profile?mid={{ member.id }}">
                         <div class="col-sm-4">
                             <div class="text-center">
                                 <img alt="image" class="img-circle m-t-xs img-responsive" src="{{ member.avatar }}">

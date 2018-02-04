@@ -62,7 +62,7 @@
 
                                 {% if want_lover %}
                                     <div class="feed-element">
-                                        <a href="profile?mid={{ want_lover.id }}" class="pull-left">
+                                        <a href="profile?mid={{ want_lover.id }}" class=" J_menuItem pull-left">
                                             <img alt="image" class="feed-photo" src="{{ want_lover.avatar }}">
                                         </a>
                                         <div class="media-body ">
@@ -89,7 +89,7 @@
 
                                 {% for lover in lovers %}
                                 <div class="feed-element">
-                                    <a href="profile?mid={{ lover.id }}" class="pull-left">
+                                    <a href="profile?mid={{ lover.id }}" class="J_menuItem pull-left">
                                         <img alt="image" class="feed-photo" src="{{ lover.avatar }}">
                                     </a>
                                     <div class="media-body ">

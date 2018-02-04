@@ -54,7 +54,7 @@
                     <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">2.14活动</span><span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="contacts">联系人</a>
+                            <li><a class="J_menuItem" href="contacts">联系人</a>
                         </li>
 
                     </ul>

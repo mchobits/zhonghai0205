@@ -175,6 +175,23 @@ class IndexController extends ControllerBase
         $data_id = $this->request->getPost("data_id", "int");
         if ($this->request->isAjax() && $this->is_weixin() && $this->request->isPost()) {
 
+
+            $user_id = intval($this->session->get('user_id'));
+            $user = Members::findFirst(
+                [
+                    'conditions' => 'id = ?1',
+                    'bind' => [
+                        1 => $user_id,
+                    ]
+                ]
+            );
+
+
+
+            if ($data_id == 0) {
+                return $this->sendJson(["my_avatar" => $user->avatar, "lover_avatar" => "img3/no_pic.png"]);
+            }
+
             $lover = Members::findFirst(
                 [
                     'conditions' => 'id = ?1',
@@ -187,16 +204,6 @@ class IndexController extends ControllerBase
             if (!$lover) {
                 return $this->sendJson(["code" => '400']);
             }
-
-            $user_id = intval($this->session->get('user_id'));
-            $user = Members::findFirst(
-                [
-                    'conditions' => 'id = ?1',
-                    'bind' => [
-                        1 => $user_id,
-                    ]
-                ]
-            );
 
             $user->love_id = $data_id;
             $user->update();

@@ -346,14 +346,15 @@ function jiazaibiu() {
 
         sale(0, 0, "b8a004");
         sale(259, 63, "b8a005");
-        sale(100, 349, "b8a006");
+        sale(100, 330, "b8a006");
         sale(70, 480, "b8a007");
 
         sale(70, 170, "b8a008");
         saleSTou(163, 575, "b8a009a");
         saleSTou(382, 575, "b8a009b");
         //sale(70, 170, "b8a009");
-        sale(200, 700, "b8a010");
+        // sale(200, 700, "b8a010");
+        sale(210, 800, "b8a010");
 
         sale(0, 0, "b8a011");
         sale(259, 63, "b8a012");
@@ -371,6 +372,9 @@ function jiazaibiu() {
         // sale(70, 349, "b8a001bc");
 
         sale(35,-400,"b8010");
+        sale(35,140,"b8011");
+        sale(190,150,"b8012");
+
 
 		sale(0, 0, "b9001");
 		sale(51, 67, "b9002");
@@ -593,30 +597,46 @@ function dh8a4() {
 // 	}, 600);
 // }
 
-//留级重考
-$("#b8007,#b12005").on("click", function() {
-	window.location.replace("http://www.i-orange-xf.com/huanyuhui/c/i");
+var b8011clicked = true;
+$("#b8011").on("click", function () {
+	//console.log(b8011clicked);
+	if (b8011clicked) {
+		b8011clicked = false;
+        $("#b8012").fadeIn(500);
+	} else {
+        b8011clicked = true;
+        $("#b8012").fadeOut(500);
+
+	}
 });
 
-//抽取红包
-$("#b8006").on("click", function() {
-	ajax.send("getHb", {score: ceshifs}, function(data) {
+// //留级重考
+// $("#b8007,#b12005").on("click", function() {
+// 	window.location.replace("http://www.i-orange-xf.com/huanyuhui/c/i");
+// });
+//
+// //抽取红包
+// $("#b8006").on("click", function() {
+// 	ajax.send("getHb", {score: ceshifs}, function(data) {
+//
+// 		$("#logo1").fadeIn(500);
+// 		console.log(data);
+// 		if (data.money > 0) {
+// 			$("#hbnumber").html(data.money / 100 + "元");
+// 			$("#page11").fadeIn(500);
+// 			setTimeout(function() {
+// 				$("#page13").fadeIn(500);
+// 			}, 1500);
+// 		} else {
+// 			$("#page12").fadeIn(500);
+// 		}
+// 	});
+// });
 
-		$("#logo1").fadeIn(500);
-		console.log(data);
-		if (data.money > 0) {
-			$("#hbnumber").html(data.money / 100 + "元");
-			$("#page11").fadeIn(500);
-			setTimeout(function() {
-				$("#page13").fadeIn(500);
-			}, 1500);
-		} else {
-			$("#page12").fadeIn(500);
-		}
-	});
-});
 
-
+// $("#b8a010").on("click", function () {
+//
+// });
 
 $("#b10004").on("click", function() {
 	$("#page10").fadeOut(500);
@@ -727,7 +747,7 @@ $("#b9004").on("click", function() {
                 avatar_type:0
                 //authCode: yzmcode
             }, function(data) {
-                //alert(data.mediaId);
+
 
                 build_pipei_list(data);
                 $("#page8a").fadeIn(500);
@@ -756,6 +776,7 @@ $("#b9004").on("click", function() {
 });
 
 function build_pipei_list(data) {
+    alert("报名成功！");
 	//alert("啊呀～不好意思哦，暂时没有和你分数接近的人哦，不过没关系，我们已经记录你的资料了");
     if(data.count > 0) {
         $.each(data.pipei_members,function(index,value,array){
@@ -979,6 +1000,10 @@ function sfs() {
 
 
 $("#b8a014").on("click",function (e) {
+    alert("请于2月14日到中海环宇城领取奖品");
+});
+
+$("#b8a010").on("click",function (e) {
 	alert("请于2月14日到中海环宇城领取奖品");
 });
 
@@ -988,24 +1013,22 @@ $(".ppdx").on("click", function (e) {
     var data_id = $(this).attr("data-id");
     var that = this;
 
-	if (data_id == 0) {
-		return false;
-	} else {
-        $("#page8b").fadeIn(500);
 
-        ajax.send("pipei", {
-            data_id: data_id
-            //authCode: yzmcode
-        }, function(data) {
-            $("#page8b").fadeOut(500);
-            $("#page8a1").fadeOut(500);
-            //console.log($(this).attr("src"));
-            $("#b8a009a").attr("src", data.my_avatar);
-            $("#b8a009b").attr("src", data.lover_avatar);
-            $("#page8a2").fadeIn(500);
+	$("#page8b").fadeIn(500);
 
-        });
-	}
+	ajax.send("pipei", {
+		data_id: data_id
+		//authCode: yzmcode
+	}, function(data) {
+		$("#page8b").fadeOut(500);
+		$("#page8a1").fadeOut(500);
+		//console.log($(this).attr("src"));
+		$("#b8a009a").attr("src", data.my_avatar);
+		$("#b8a009b").attr("src", data.lover_avatar);
+		$("#page8a2").fadeIn(500);
+
+	});
+
 
 
 });
@@ -1545,41 +1568,41 @@ $(".xzxz3").on("click", function() {
 
 
 
-$("#b9004a").on("click", function() {
-
-	var namestr = document.getElementById("namestr").value;
-	var phonestr = document.getElementById("phonestr").value;
-
-	if (namestr == "" || phonestr == "") {
-		alert("请输入完整的注册信息");
-	}
-
-	var telReg = !! phonestr.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/);
-	//如果手机号码不能通过验证
-	if (telReg == false) {
-		alert("请输入正确的手机号码");
-		return false;
-	}
-
-	$("#b9004a").fadeOut(500);
-	$("#yzmdjsdiv").fadeIn(500);
-	var iiss = 60;
-	var hhh = setInterval(function() {
-		if (iiss < 1) {
-			clearInterval(hhh);
-			$("#b9004a").fadeIn(500);
-			$("#yzmdjsdiv").fadeOut(500);
-		}
-		iiss--;
-		document.getElementById("yzmdjspan").innerHTML = iiss;
-	}, 1000);
-
-	ajax.send("getAuthCode", {
-		phone: phonestr
-	}, function(data) {
-		alert("验证码已发送成功而,请注意查收~");
-	});
-});
+// $("#b9004a").on("click", function() {
+//
+// 	var namestr = document.getElementById("namestr").value;
+// 	var phonestr = document.getElementById("phonestr").value;
+//
+// 	if (namestr == "" || phonestr == "") {
+// 		alert("请输入完整的注册信息");
+// 	}
+//
+// 	var telReg = !! phonestr.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/);
+// 	//如果手机号码不能通过验证
+// 	if (telReg == false) {
+// 		alert("请输入正确的手机号码");
+// 		return false;
+// 	}
+//
+// 	$("#b9004a").fadeOut(500);
+// 	$("#yzmdjsdiv").fadeIn(500);
+// 	var iiss = 60;
+// 	var hhh = setInterval(function() {
+// 		if (iiss < 1) {
+// 			clearInterval(hhh);
+// 			$("#b9004a").fadeIn(500);
+// 			$("#yzmdjsdiv").fadeOut(500);
+// 		}
+// 		iiss--;
+// 		document.getElementById("yzmdjspan").innerHTML = iiss;
+// 	}, 1000);
+//
+// 	ajax.send("getAuthCode", {
+// 		phone: phonestr
+// 	}, function(data) {
+// 		alert("验证码已发送成功而,请注意查收~");
+// 	});
+// });
 
 function dh2() {
     rotateScale("a2002", 180, 0, 180, 320, 1, 1, 0, 0, 0, 1, 800, 1300, 0, 4);

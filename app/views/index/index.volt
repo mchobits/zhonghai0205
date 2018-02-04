@@ -322,9 +322,8 @@
 			<div id="page81" style="display: block">
 
 				<img src="img3/1001.png"     id="b8003"  style="position: absolute;opacity:0"/>
-				</div>
-
 			</div>
+
 			<div id="page82" style="display: none">
 				<img src="img3/2001.png"     id="b8003a"  style="position: absolute;opacity: 0"/>
 				{#<img src="img3/2002.png"     id="b8003a"  style="position: absolute;opacity:0"/>#}
@@ -346,13 +345,17 @@
 				{#<img src="img3/6002.png"     id="b8003a4"  style="position: absolute;opacity:0"/>#}
 			</div>
 
+			<img src="img3/107-4.png"     id="b8010"  style="position: absolute;opacity: 0"/>
 			<div id="andiv" style="display: none">
 				<img src="img3/109.png"     id="b8004"  style="position: absolute;" />
 				<img src="img3/110.png"     id="b8005"  style="position: absolute;" />
+				<img src="img3/107-5.png"     id="b8011"  style="position: absolute;opacity: 1"/>
 				{#<img src="img/yshy.png"     id="b8006"  style="position: absolute;" class="yy"/>#}
 				{#<img src="img/ljck.png"     id="b8007"  style="position: absolute;" class="yy"/>#}
 			</div>
-			<img src="img3/107-4.png"     id="b8010"  style="position: absolute;opacity: 0"/>
+
+
+			<img src="img3/107-6.png"     id="b8012"  style="position: absolute;opacity: 1;display: none"/>
 		</div>
 
 
@@ -403,7 +406,7 @@
 				<img src="img3/ppcg.png"     id="b8a006"  style="position: absolute;opacity:1"/>
 				<img src="img3/b8a001bb.png"     id="b8a007"  style="position: absolute;opacity:1"/>
 				<img src="img3/8a1005.png"     id="b8a008"  style="position: absolute;opacity:1"/>
-				<img src="img3/mmm.png" id="b8a010"  style="position: absolute;opacity:1"/>
+				<img src="img3/mmm.png" id="b8a010"  style="position: absolute;opacity:1" class="yy"/>
 				<img id="b8a009a"  src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
 				<img id="b8a009b"  src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
 
@@ -413,7 +416,7 @@
 				<img src="img3/8a1001.png"     id="b8a011"  style="position: absolute;"/>
 				<img src="img3/8a1002.png"     id="b8a012"  style="position: absolute;opacity:1"/>
 				<img src="img3/8a1005.png"     id="b8a013"  style="position: absolute;opacity:1"/>
-				<img src="img3/giftbox.png"     id="b8a014"  style="position: absolute;opacity:1"/>
+				<img src="img3/giftbox.png"     id="b8a014"  style="position: absolute;opacity:1" class="yy"/>
 				<img src="img3/8a1007.png"     id="b8a015"  style="position: absolute;opacity:1"/>
 			</div>
 
