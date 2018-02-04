@@ -303,7 +303,7 @@ function jiazaibiu() {
 		salekj(0, 0, "kj");
 
 		sale(0, 0, "a7001");
-		sale(0, 500, "a7002");
+		sale(30, 217, "a7002");
 
         sale(0, 0, "b8001");
         sale(132, 0, "b8001a");
@@ -364,7 +364,7 @@ function jiazaibiu() {
         sale(169, 709, "b8a015");
 
         sale(0, 0, "b8b001");
-        sale(0, 400, "b8b002");
+        sale(30, 174, "b8b002");
 
         // sale(70, 480, "b8a001bb");
         // sale(200, 700, "b8a001ba");
