@@ -73,4 +73,9 @@ $router->add('/admin', [
     'action' => 'index'
 ]);
 
+$router->add('/admin/login', [
+    'controller' => 'index',
+    'action' => 'login'
+]);
+
 $router->handle();

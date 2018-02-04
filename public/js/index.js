@@ -24,7 +24,7 @@ var a53time = 4000;
 
 //var ajax = new Ajax("http://172.16.0.98:8080/cy_server/c/",{openid :"1213",nickname:"来自下水道的美人鱼",headimgurl:"aaaaaaaaa",topenid:"bbbb"});
 /*var tzstr = "http://172.16.0.66:8080/njbt1128/content.html";*/
-var ajax = new Ajax("http://devision.gdylfw.com/huanyuhui/c/", {
+var ajax = new Ajax(baseUrl + "/huanyuhui/c/", {
 	openid: 40,
 	nickname: "aaaa",
 	headimgurl: "bbbb",
@@ -33,7 +33,7 @@ var ajax = new Ajax("http://devision.gdylfw.com/huanyuhui/c/", {
 
 var title = "中海婚介所，爱情专家为你解答春节前你能否脱单？";
 var namehq = "";
-var imgUrl = "http://devision.gdylfw.com/img2/fx.png";
+var imgUrl = baseUrl + "/img2/fx.png";
 ajax.send("initMsg", {}, function(data) {
 	namehq = data.nickname;
 });

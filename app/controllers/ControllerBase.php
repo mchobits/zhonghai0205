@@ -12,6 +12,10 @@ class ControllerBase extends Controller
         }
         return false;
     }
+    public function initialize()
+    {
+        $this->view->setVar("baseURL",getenv('BASE_URL'));
+    }
 
     protected function sendJson($data) {
         if($this->request->isAjax() == true) {

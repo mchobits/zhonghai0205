@@ -274,5 +274,22 @@ class IndexController extends ControllerBase
         }
         return $this->sendJson(["count"=> count($pipei_members), "pipei_members" => $pipei_members]);
     }
+
+    public function loginAction()
+    {
+        if ($this->request->isGet()){
+            return $this->view->setMainView('admin/login');
+        } else {
+            $username = $this->request->getPost("email", "string");
+            $password = $this->request->getPost("password", "string");
+            if ($username == getenv('MANAGER_USERNAME') && $password == getenv('MANAGER_PASSWORD')) {
+                $this->session->set("user-level", "administrator");
+                $this->response->redirect("/admin/index");
+            } else {
+                $this->response->redirect("/admin/login");
+            }
+
+        }
+    }
 }
 

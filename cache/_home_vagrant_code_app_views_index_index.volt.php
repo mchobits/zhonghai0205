@@ -11,7 +11,11 @@
 	<meta name="format-detection" content="email=no">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
+
 <body>
+<script type="text/javascript">
+    var baseUrl = "<?= $baseURL ?>";
+</script>
 <div id="all" style="position: absolute;overflow:hidden">
 	<div id="jiazai" style="display: block;">
 		<img src="img/timg.gif" id="jz001" class="xzfs">
@@ -495,7 +499,7 @@
 			<img src="img/dgdfg01.png"  id="b13002"  style="position: absolute;"/>
 		</div>
 	</div>
-	
+	<audio src="music/bg.mp3" loop="loop" id="bgmusic">
 	</audio>
 </div>
 
@@ -520,7 +524,7 @@
         fenxiangcallback: function () {
             var backInfo = {};
             backInfo.title  =  title;
-            backInfo.link   = "http://devision.gdylfw.com/";
+            backInfo.link   = "<?= $baseURL ?>";
             backInfo.imgUrl =  imgUrl;
             backInfo.desc   = "2月14日佛山中海环宇城，“一日情侣”活动，2018你要来找那个ta吗?";
             return backInfo;
@@ -530,7 +534,7 @@
     var musicmm = document.getElementById("bgmusic");
     document.addEventListener("WeixinJSBridgeReady", function () {
         WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-            /*musicmm.play();*/
+            musicmm.play();
         });
 
 
@@ -543,7 +547,7 @@
 
     var url = window.location.href;
     if(url.split("from").length>=2){
-        window.location.href="http://devision.gdylfw.com/";
+        window.location.href="<?= $baseURL ?>";
     };
 
     document.addEventListener("touchmove", function(event){
@@ -553,7 +557,7 @@
 
     function subSomething() {
         if(document.readyState == "complete"){
-
+			
             setTimeout(function(){
                 $("#content").fadeIn(1000);
                 $("#age1").fadeIn(1000);

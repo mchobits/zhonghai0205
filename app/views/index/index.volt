@@ -11,7 +11,11 @@
 	<meta name="format-detection" content="email=no">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
+
 <body>
+<script type="text/javascript">
+    var baseUrl = "{{ baseURL }}";
+</script>
 <div id="all" style="position: absolute;overflow:hidden">
 	<div id="jiazai" style="display: block;">
 		<img src="img/timg.gif" id="jz001" class="xzfs">
@@ -520,7 +524,7 @@
         fenxiangcallback: function () {
             var backInfo = {};
             backInfo.title  =  title;
-            backInfo.link   = "http://devision.gdylfw.com/";
+            backInfo.link   = "{{ baseURL }}";
             backInfo.imgUrl =  imgUrl;
             backInfo.desc   = "2月14日佛山中海环宇城，“一日情侣”活动，2018你要来找那个ta吗?";
             return backInfo;
@@ -543,7 +547,7 @@
 
     var url = window.location.href;
     if(url.split("from").length>=2){
-        window.location.href="http://devision.gdylfw.com/";
+        window.location.href="{{ baseURL }}";
     };
 
     document.addEventListener("touchmove", function(event){
