@@ -53,10 +53,10 @@ $router->add(
 );
 
 $router->add(
-    '/huanyuhui/c/getHb',
+    '/huanyuhui/c/pipei',
     [
         'controller' => 'index',
-        'action' => 'getHb'
+        'action' => 'pipei'
     ]
 );
 

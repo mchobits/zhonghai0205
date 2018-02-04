@@ -35,7 +35,7 @@ class WechatController extends ControllerBase
             // 已授权
             $user = $weixin->oauth->user();
 
-            $voter = Voters::findFirst(
+            $member = Members::findFirst(
                 [
                     'conditions' => 'open_id = ?1',
                     'bind'       => [
@@ -44,33 +44,34 @@ class WechatController extends ControllerBase
                 ]
 
             );
-            if (!$voter) {
-                $voter = new Voters();
-                $voter->id = dk_get_next_id();
-                $voter->open_id = $user->getId();
-                $voter->save();
+            if (!$member) {
+                $member = new Members();
+                $member->id = dk_get_next_id();
+                $member->open_id = $user->getId();
+                $member->save();
 
             }
 
             if ($user->getNickname()) {
                 $original = $user->getOriginal();
-                $voter->nickname = $user->getNickname();
-                $voter->head_img_url = $user->getAvatar();
-                $voter->sex = $original['sex'];
-                $voter->country = $original['country'];
-                $voter->province = $original['province'];
-                $voter->city = $original['city'];
-                $voter->unionid = isset($original['unionid']) ? $original['unionid'] : $user->getId();
-                $voter->access_token = $user->getToken()->access_token;
-                $voter->refresh_token = $user->getToken()->refresh_token;
-                $voter->update();
+                $member->nickname = $user->getNickname();
+                $member->head_img_url = $user->getAvatar();
+                $member->sex = $original['sex'];
+                $member->country = $original['country'];
+                $member->province = $original['province'];
+                $member->city = $original['city'];
+                $member->unionid = isset($original['unionid']) ? $original['unionid'] : $user->getId();
+                $member->access_token = $user->getToken()->access_token;
+                $member->refresh_token = $user->getToken()->refresh_token;
+                $member->create_time = time();
+                $member->update();
             }
 
-            if (!$voter->nickname) {
+            if (!$member->nickname) {
                 $weixin->oauth->scopes(['snsapi_userinfo'])->redirect()->send();
             } else {
-                $this->session->set('user_id', $voter->id);
-                $this->session->set('user_nickname', $voter->nickname);
+                $this->session->set('user_id', $member->id);
+                $this->session->set('user_nickname', $member->nickname);
                 $redirect = $this->session->get('redirect');
             }
 

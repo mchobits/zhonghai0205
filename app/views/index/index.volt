@@ -364,12 +364,12 @@
 			<img src="img/1001.png"         id="b9002"  style="position: absolute;"/>
 			<img src="img/1002.png"         id="b9004"  style="position: absolute;"/>
 
-			<img id="b9003" src="img3/0.jpg" style="width: 120px; height: 120px;border-radius:15px;position: absolute;opacity:1"    />
+			<img id="b9003" src="img3/0.png" style="width: 120px; height: 120px;border-radius:15px;position: absolute;opacity:1"    />
 			{#<img src="img/a1003a.png"       id="b9004a"  style="position: absolute;"/>#}
 			{#<div id="yzmdjsdiv" style="position: absolute;font-size: 10px;color: red;display: none">#}
 				{#<span id="yzmdjspan">60</span>s后重新发送#}
 			{#</div>#}
-			<input type="text" id="agestr"   style="position: absolute;text-align: left;" value="" class="inputclass1"/>
+			<input type="tel" id="agestr"   style="position: absolute;text-align: left;" value="" class="inputclass1"/>
 			<input type="text" id="namestr"   style="position: absolute;text-align: left;" value="" class="inputclass1"/>
 			<input type="text" id="petstr"   style="position: absolute;text-align: left;" value="无" class="inputclass1"/>
 			<textarea id="storystr" style="position: absolute;text-align: left;" class="inputclass1"></textarea>
@@ -387,11 +387,11 @@
 				<img src="img3/8a1004.png"     id="b8a001b"  style="position: absolute;opacity:1"/>
 				<img src="img3/8a1005.png"     id="b8a001c"  style="position: absolute;opacity:1"/>
 
-				<img id="b8a001d1" data-id="1" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
-				<img id="b8a001d2" data-id="2" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
-				<img id="b8a001d3" data-id="3" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
-				<img id="b8a001d4" data-id="4" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
-				<img id="b8a001d5" data-id="5" class="ppdx" src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d0" data-id="0" class="ppdx" src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d1" data-id="0" class="ppdx" src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d2" data-id="0" class="ppdx" src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d3" data-id="0" class="ppdx" src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a001d4" data-id="0" class="ppdx" src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
 			</div>
 			<div id="page8a2" style="display: none">
 				<img src="img3/8a1001.png"     id="b8a004"  style="position: absolute;"/>
@@ -511,8 +511,9 @@
 <script type="text/javascript" src="js/soundjs.js"></script>
 <script type="text/javascript" src="js/resLoader.js"></script>
 <script type="text/javascript" src="js/nbajax.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
 <script>
 
     init({

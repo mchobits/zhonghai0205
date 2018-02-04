@@ -3,6 +3,9 @@ var bgw = 640,
 var sfw, sfh;
 var mm = 0;
 
+var is_selected_avatar = false;
+var media_id;
+
 var a11time = 5000;
 var a12time = 5000;
 var a13time = 5000;
@@ -335,11 +338,11 @@ function jiazaibiu() {
         sale(70, 480, "b8a001b");
         sale(70, 170, "b8a001c");
 
-        saleSTou(163, 575, "b8a001d1");
-        saleSTou(382, 575, "b8a001d2");
-        saleSTou(113, 770, "b8a001d3");
-        saleSTou(273, 770, "b8a001d4");
-        saleSTou(436, 770, "b8a001d5");
+        saleSTou(163, 575, "b8a001d0");
+        saleSTou(382, 575, "b8a001d1");
+        saleSTou(113, 770, "b8a001d2");
+        saleSTou(273, 770, "b8a001d3");
+        saleSTou(436, 770, "b8a001d4");
 
         sale(0, 0, "b8a004");
         sale(259, 63, "b8a005");
@@ -410,7 +413,7 @@ function jiazaibiu() {
 		/*paihangbang();*/
 		//dh888(1);
 		salediv(0, 0, "all");
-        $("#page9").fadeIn(500);
+        //$("#page9").fadeIn(500);
 		/*$("#b8004,#b8005,#b8006,#b8007").fadeOut(500);
 
 		$("#b8004,#b8007").fadeIn(500);*/
@@ -418,48 +421,50 @@ function jiazaibiu() {
 		// $("#page9").fadeIn(500);
 		//leftAndRight("b1003",-1,1,500);
 
+
 	}
 
 	/*startdh();*/
 }
 
+
 wx.ready(function () {
     $("#b9003").on("click", function () {
-        wx.chooseImage({
-            count: 1,
-            sizeType: ['original'],
-            sourceType: ['album'],
-            success: function (result) {
-                console.log(result.localIds[0]);
-                images.localId = result.localIds;
-                alert(result.localIds[0]);
-                function upload() {
-                    wx.uploadImage({
-                        localId: images.localId[0],
-                        isShowProgressTips: 1,
-                        success: function(res) {
-                            alert(res.serverId);
-                            images.serverId.push(res.serverId);
-                            wx.downloadImage({
-                                serverId: res.serverId,
-                                isShowProgressTips: 1,
-                                success: function (res) {
-                                    alert(res.localId);
-                                    $("#b9003").attr("src", res.localId);
-                                    var localId = res.localId;
-                                }
-                            });
-
-                        },
-                        fail: function(res) {
-                            alert(JSON.stringify(res));
-                        }
-                    });
-                }
-                upload();
-
-            }
-        });
+    	alert("为保证图片质量，请选择正方形的照片");
+		wx.chooseImage({
+			count: 1,
+			sizeType: ['original'],
+			sourceType: ['album'],
+			success: function (result) {
+				console.log(result.localIds[0]);
+				images.localId = result.localIds;
+				//alert(result.localIds[0]);
+				function upload() {
+					wx.uploadImage({
+						localId: images.localId[0],
+						isShowProgressTips: 1,
+						success: function(res) {
+							//alert(res.serverId);
+                            is_selected_avatar = true;
+                            media_id = res.serverId;
+							wx.downloadImage({
+								serverId: res.serverId,
+								isShowProgressTips: 1,
+								success: function (res) {
+									//alert(res.localId);
+									$("#b9003").attr("src", res.localId);
+									var localId = res.localId;
+								}
+							});
+						},
+						fail: function(res) {
+							alert(JSON.stringify(res));
+						}
+					});
+				}
+				upload();
+			}
+            });
     });
 });
 
@@ -668,6 +673,7 @@ $("#b1007").on("click", function() {
 
 
 //提交注册信息
+var b9004clicked = 0;
 $("#b9004").on("click", function() {
 	var agestr = document.getElementById("agestr").value;
 	var namestr = document.getElementById("namestr").value;
@@ -704,29 +710,62 @@ $("#b9004").on("click", function() {
 		return false;
 	}
 
+	var avatar_type = 0;
+	var r;
+	if(!is_selected_avatar) {
 
-	ajax.send("register", {
-		phone: phonestr,
-		nickName: namestr,
-		age: agestr,
-		pet: petstr,
-		story: storystr
-		//authCode: yzmcode
-	}, function(data) {
-		// ajax.send("getHb", {
-		// 	phone: phonestr,
-		// 	nickName: namestr
-		// }, function(data) {
-		// 	if (data.money > 0) {
-		// 		$("#hbnumber").html(data.money / 100 + "元");
-		// 		$("#page11").fadeIn(500);
-		// 	} else {
-		// 		$("#page12").fadeIn(500);
-		// 	}
-		// });
-		$("#page8a").fadeIn(500);
-	});
+		r = confirm('你还没有上传你的头像，选择"是"直接使用微信头像，选择"否"重新上传。')
+        if(r === true) {
+            b9004clicked = 1;
+            ajax.send("register", {
+                phone: phonestr,
+                nickName: namestr,
+                age: agestr,
+                pet: petstr,
+                story: storystr,
+                media_id:media_id,
+                avatar_type:0
+                //authCode: yzmcode
+            }, function(data) {
+                //alert(data.mediaId);
+
+                build_pipei_list(data);
+                $("#page8a").fadeIn(500);
+            });
+        } else {
+            return false;
+        }
+	} else {
+        b9004clicked = 1;
+        ajax.send("register", {
+            phone: phonestr,
+            nickName: namestr,
+            age: agestr,
+            pet: petstr,
+            story: storystr,
+            media_id:media_id,
+            avatar_type:1
+            //authCode: yzmcode
+        }, function(data) {
+            //alert(data.mediaId);
+
+            build_pipei_list(data);
+            $("#page8a").fadeIn(500);
+        });
+	}
 });
+
+function build_pipei_list(data) {
+	alert(data.count);
+    if(data.count > 0) {
+        $.each(data.pipei_members,function(index,value,array){
+        	//alert(value.real_name);
+            //console.log(index);
+            //console.log(value.avatar);
+            $("#b8a001d"+index).attr("src",value.avatar).attr("data-id",value.id);
+        });
+    }
+}
 
 
 
@@ -757,7 +796,7 @@ function cjqihuan(number) {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
-			musicmm.pause();
+			//musicmm.pause();
 		}, a11time);
 		ceshifs = ceshifs + 10;
 	} else if (number == 12) {
@@ -765,7 +804,7 @@ function cjqihuan(number) {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
-			musicmm.pause();
+			//musicmm.pause();
 		}, a12time);
 		ceshifs = ceshifs + 0;
 	} else if (number == 13) {
@@ -773,7 +812,7 @@ function cjqihuan(number) {
 			$("#page6").fadeIn(500);
 			zl();
 			stopAll();
-			musicmm.pause();
+			//musicmm.pause();
 		}, a13time);
 		ceshifs = ceshifs + 15;
 	} else if (number == 21) {
@@ -868,7 +907,7 @@ var zc = 0; //zc=0 跳转到填写注册信息页面  zc=1已经是会员可以�
 var hbmoney = true; //hbmoney = true还有红包 hbmoney = false没有红包; 
 function sfs() {
 	var typenumber = 0;
-	$("#b8006,#b8005,#b8007").fadeOut(500);
+	$("#b8006,#b8007").fadeOut(500);
 	var ceshifs12 = ceshifs;
 	ajax.send("subScore", {
 		score: ceshifs
@@ -943,15 +982,32 @@ $("#b8a014").on("click",function (e) {
 	alert("请于2月14日到中海环宇城领取奖品");
 });
 
-$(".ppdx").on("click", function (e) {
-	console.log($(this).attr("data-id"));
-	$("#page8b").fadeIn(500);
-	setTimeout(function () {
-        $("#page8b").fadeOut(500);
-        $("#page8a1").fadeOut(500);
-        $("#page8a2").fadeIn(500);
 
-    },3000);
+$(".ppdx").on("click", function (e) {
+	//console.log($(this).attr("data-id"));
+    var data_id = $(this).attr("data-id");
+    var that = this;
+
+	if (data_id === 0) {
+		return false;
+	}
+	$("#page8b").fadeIn(500);
+
+
+
+    ajax.send("pipei", {
+        data_id: data_id
+        //authCode: yzmcode
+    }, function(data) {
+		$("#page8b").fadeOut(500);
+		$("#page8a1").fadeOut(500);
+		//console.log($(this).attr("src"));
+		$("#b8a009a").attr("src", data.my_avatar);
+        $("#b8a009b").attr("src", data.lover_avatar);
+		$("#page8a2").fadeIn(500);
+
+    });
+
 });
 
 function zl() {
