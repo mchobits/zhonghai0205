@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87e9ba6-ee9a-470c-bb04-e1d3941c71d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/login.volt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/profile.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/router.php" afterPath="$PROJECT_DIR$/app/config/router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ControllerBase.php" afterPath="$PROJECT_DIR$/app/controllers/ControllerBase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/IndexController.php" afterPath="$PROJECT_DIR$/app/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/contacts.volt" afterPath="$PROJECT_DIR$/app/views/admin/contacts.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.volt" afterPath="$PROJECT_DIR$/app/views/admin/index.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index_v3.volt" afterPath="$PROJECT_DIR$/app/views/admin/index_v3.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index/index.volt" afterPath="$PROJECT_DIR$/app/views/index/index.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_admin_contacts.volt.php" afterPath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_admin_contacts.volt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_admin_index.volt.php" afterPath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_admin_index.volt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_admin_index_v3.volt.php" afterPath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_admin_index_v3.volt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_index_index.volt.php" afterPath="$PROJECT_DIR$/cache/_home_vagrant_code_app_views_index_index.volt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/count.js" afterPath="$PROJECT_DIR$/public/js/count.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/index.js" afterPath="$PROJECT_DIR$/public/js/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,11 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
               <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -124,16 +118,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
               <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contacts.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/contacts.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="49" column="54" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -207,6 +191,7 @@
         <option value="$PROJECT_DIR$/app/views/admin/login.volt" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -373,12 +358,12 @@
       <workItem from="1517210850751" duration="39534000" />
       <workItem from="1517488479316" duration="9736000" />
       <workItem from="1517532304792" duration="20793000" />
-      <workItem from="1517624027636" duration="49515000" />
+      <workItem from="1517624027636" duration="49663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119578000" />
+    <option name="totallyTimeSpent" value="119726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="992" extended-state="6" />
@@ -414,14 +399,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/router.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
@@ -1130,6 +1107,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
           <folding />
         </state>
       </provider>
