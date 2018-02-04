@@ -495,7 +495,7 @@
 			<img src="img/dgdfg01.png"  id="b13002"  style="position: absolute;"/>
 		</div>
 	</div>
-	{#<audio src="music/bg.mp3" loop="loop" id="bgmusic">#}
+	<audio src="music/bg.mp3" loop="loop" id="bgmusic">
 	</audio>
 </div>
 
@@ -530,7 +530,7 @@
     var musicmm = document.getElementById("bgmusic");
     document.addEventListener("WeixinJSBridgeReady", function () {
         WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-            /*musicmm.play();*/
+            musicmm.play();
         });
 
 

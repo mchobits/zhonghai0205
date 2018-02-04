@@ -756,7 +756,7 @@ $("#b9004").on("click", function() {
 });
 
 function build_pipei_list(data) {
-	//alert(data.count);
+	//alert("啊呀～不好意思哦，暂时没有和你分数接近的人哦，不过没关系，我们已经记录你的资料了");
     if(data.count > 0) {
         $.each(data.pipei_members,function(index,value,array){
         	//alert(value.real_name);
