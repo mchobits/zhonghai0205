@@ -520,7 +520,7 @@
         fenxiangcallback: function () {
             var backInfo = {};
             backInfo.title  =  title;
-            backInfo.link   = "http://mchobits.s3.natapp.cc/";
+            backInfo.link   = "http://devision.gdylfw.com/";
             backInfo.imgUrl =  imgUrl;
             backInfo.desc   = "2月14日佛山中海环宇城，“一日情侣”活动，2018你要来找那个ta吗?";
             return backInfo;
@@ -543,7 +543,7 @@
 
     var url = window.location.href;
     if(url.split("from").length>=2){
-        window.location.href="http://mchobits.s3.natapp.cc/";
+        window.location.href="http://devision.gdylfw.com/";
     };
 
     document.addEventListener("touchmove", function(event){

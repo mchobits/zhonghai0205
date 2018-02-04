@@ -9,7 +9,7 @@
  */
 var Gcfg = {
     //默认提交地址
-    url : "http://mchobits.s3.natapp.cc/Basic/CountInit",
+    url : "http://devision.gdylfw.com/Basic/CountInit",
     //初始化分享失败
     initFx : -1,
     //访问提交数据
@@ -26,7 +26,7 @@ var Gcfg = {
     proName : null,
 
     //分享服务器计算
-    fenxiangreq : "http://mchobits.s3.natapp.cc/Basic/GetJWinXinInfo",
+    fenxiangreq : "http://devision.gdylfw.com/Basic/GetJWinXinInfo",
     //分享的url,要到服务器验证的本项目地址
     fenxiangurl : getProjectPath(),
     //分享的title :
