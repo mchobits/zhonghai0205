@@ -6,21 +6,21 @@ var mm = 0;
 var is_selected_avatar = false;
 var media_id;
 
-var a11time = 5000;
-var a12time = 5000;
+var a11time = 4000;
+var a12time = 4000;
 var a13time = 5000;
-var a21time = 7000;
-var a22time = 8000;
-var a23time = 7000;
+var a21time = 4000;
+var a22time = 5000;
+var a23time = 6000;
 var a31time = 6000;
 var a32time = 6000;
 var a33time = 6000;
-var a41time = 5000;
-var a42time = 5000;
-var a43time = 5000;
-var a51time = 8000;
-var a52time = 8000;
-var a53time = 8000;
+var a41time = 4000;
+var a42time = 4000;
+var a43time = 4000;
+var a51time = 4000;
+var a52time = 5000;
+var a53time = 4000;
 
 //var ajax = new Ajax("http://172.16.0.98:8080/cy_server/c/",{openid :"1213",nickname:"来自下水道的美人鱼",headimgurl:"aaaaaaaaa",topenid:"bbbb"});
 /*var tzstr = "http://172.16.0.66:8080/njbt1128/content.html";*/
