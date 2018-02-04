@@ -756,7 +756,7 @@ $("#b9004").on("click", function() {
 });
 
 function build_pipei_list(data) {
-	alert(data.count);
+	//alert(data.count);
     if(data.count > 0) {
         $.each(data.pipei_members,function(index,value,array){
         	//alert(value.real_name);
@@ -988,25 +988,25 @@ $(".ppdx").on("click", function (e) {
     var data_id = $(this).attr("data-id");
     var that = this;
 
-	if (data_id === 0) {
+	if (data_id == 0) {
 		return false;
+	} else {
+        $("#page8b").fadeIn(500);
+
+        ajax.send("pipei", {
+            data_id: data_id
+            //authCode: yzmcode
+        }, function(data) {
+            $("#page8b").fadeOut(500);
+            $("#page8a1").fadeOut(500);
+            //console.log($(this).attr("src"));
+            $("#b8a009a").attr("src", data.my_avatar);
+            $("#b8a009b").attr("src", data.lover_avatar);
+            $("#page8a2").fadeIn(500);
+
+        });
 	}
-	$("#page8b").fadeIn(500);
 
-
-
-    ajax.send("pipei", {
-        data_id: data_id
-        //authCode: yzmcode
-    }, function(data) {
-		$("#page8b").fadeOut(500);
-		$("#page8a1").fadeOut(500);
-		//console.log($(this).attr("src"));
-		$("#b8a009a").attr("src", data.my_avatar);
-        $("#b8a009b").attr("src", data.lover_avatar);
-		$("#page8a2").fadeIn(500);
-
-    });
 
 });
 
