@@ -234,7 +234,7 @@ class IndexController extends ControllerBase
                 if(is_array($stream)) {
                     return $this->sendJson(["code" => $stream["errcode"], "message"=>$stream["errmsg"]]);
                 }
-                $stream->saveAs('/home/vagrant/Code/public/upload', $file_name);
+                $stream->saveAs(BASE_PATH.'/public/upload', $file_name);
                 $member->avatar = '/upload/'.$file_name;
             } else {
                 $member->avatar = $member->head_img_url;
