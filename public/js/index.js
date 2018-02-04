@@ -8,7 +8,7 @@ var media_id;
 
 var a11time = 4000;
 var a12time = 4000;
-var a13time = 5000;
+var a13time = 4000;
 var a21time = 4000;
 var a22time = 5000;
 var a23time = 6000;
