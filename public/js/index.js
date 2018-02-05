@@ -1096,6 +1096,12 @@ function zl() {
 	}, 1500);
 }
 
+function zl2() {
+	setTimeout(function() {
+		huanchang();
+	}, 1600);
+}
+
 var cjcj = 1;
 
 function huanchang() {
