@@ -5,6 +5,8 @@ var mm = 0;
 
 var is_selected_avatar = false;
 var media_id;
+var type = 0;
+var my_avatar = "";
 
 var a11time = 4000;
 var a12time = 4000;
@@ -381,6 +383,56 @@ function jiazaibiu() {
         sale(220, 470, "b8a014");
         sale(169, 709, "b8a015");
 
+        sale(0, 0, "b8a016");
+
+        sale(97, 79.6, "b8a020");
+        sale(427, 79.6, "b8a021");
+        sale(28, 146, "b8a022");
+        sale(320, 146, "b8a023");
+        sale(53, 213, "b8a024");
+        sale(514, 206, "b8a025");
+        sale(99, 275, "b8a026");
+        sale(405, 275, "b8a027");
+        sale(10, 730, "b8a028");
+
+        sale(97, 79.6, "b8a030");
+        sale(427, 79.6, "b8a031");
+        sale(28, 146, "b8a032");
+        sale(320, 146, "b8a033");
+        sale(53, 213, "b8a034");
+        sale(514, 206, "b8a035");
+        sale(99, 275, "b8a036");
+        sale(405, 275, "b8a037");
+        sale(45, 730, "b8a038");
+
+        sale(97, 79.6, "b8a040");
+        sale(427, 79.6, "b8a041");
+        sale(28, 146, "b8a042");
+        sale(320, 146, "b8a043");
+        sale(53, 213, "b8a044");
+        sale(514, 206, "b8a045");
+        sale(99, 275, "b8a046");
+        sale(405, 275, "b8a047");
+        sale(10, 730, "b8a048");
+
+        sale(97, 79.6, "b8a050");
+        sale(427, 79.6, "b8a051");
+        sale(28, 146, "b8a052");
+        sale(320, 146, "b8a053");
+        sale(53, 213, "b8a054");
+        sale(514, 206, "b8a055");
+        sale(99, 275, "b8a056");
+        sale(405, 275, "b8a057");
+        sale(55, 730, "b8a058");
+
+
+
+
+
+        saleAvatar(203, 373, "b8a060", 230, 230);
+        sale(225, 893, "b8a062");
+        salefs2(-210,630,"b8a061");
+
         sale(0, 0, "b8b001");
         sale(30, 174, "b8b002");
 
@@ -443,6 +495,7 @@ function jiazaibiu() {
 		//leftAndRight("b1003",-1,1,500);
 
 
+
 	}
 
 	/*startdh();*/
@@ -489,34 +542,33 @@ wx.ready(function () {
     });
 });
 
-function paihangbang() {
-	ajax.send("randList", {}, function(data) {
-		console.log(data.array);
-
-		/*<tr>
-			<td style="width: 23%">1</td>
-			<td>aaaaaa</td>
-			<td style="width: 30%">aaaaaa</td>
-		</tr>*/
-
-		var strhtml = "";
-		for (var i = 0; i < data.array.length; i++) {
-			var namestr = data.array[i].nickname;
-			if (namestr.length > 6) {
-				namestr = namestr.substr(0, 6) + "...";
-			}
-			strhtml = strhtml + "<tr>" +
-				"<td style='width: 23%'>" + data.array[i].rank + "</td>" +
-				"<td style='width: 23%'>" + namestr + "</td>" +
-				"<td style='width: 23%'>" + data.array[i].score + "</td>" +
-				"<tr>";
-		}
-
-		$("#phtable").html(strhtml);
-		$("#page10").fadeIn(500);
-	});
-
-}
+// function paihangbang() {
+// 	ajax.send("randList", {}, function(data) {
+// 		console.log(data.array);
+//
+// 		/*<tr>
+// 			<td style="width: 23%">1</td>
+// 			<td>aaaaaa</td>
+// 			<td style="width: 30%">aaaaaa</td>
+// 		</tr>*/
+//
+// 		var strhtml = "";
+// 		for (var i = 0; i < data.array.length; i++) {
+// 			var namestr = data.array[i].nickname;
+// 			if (namestr.length > 6) {
+// 				namestr = namestr.substr(0, 6) + "...";
+// 			}
+// 			strhtml = strhtml + "<tr>" +
+// 				"<td style='width: 23%'>" + data.array[i].rank + "</td>" +
+// 				"<td style='width: 23%'>" + namestr + "</td>" +
+// 				"<td style='width: 23%'>" + data.array[i].score + "</td>" +
+// 				"<tr>";
+// 		}
+//
+// 		$("#phtable").html(strhtml);
+// 		$("#page10").fadeIn(500);
+// 	});
+// }
 
 // function orient() {
 // 	if (window.orientation == 90 || window.orientation == -90) {
@@ -536,6 +588,78 @@ function paihangbang() {
 // 	}
 // }
 
+function dh999() {
+    $("#page8a4").fadeIn(200);
+    if(my_avatar != "") {
+        $("#b8a060").attr("src", my_avatar);
+	}
+    $("#b8a061").html(my_nickname);
+    if (type == 1) {
+        dh9a1();
+    } else if (type == 2) {
+        dh9a2();
+    } else if (type == 3) {
+        dh9a3();
+    } else if (type == 4) {
+        dh9a4();
+    }
+
+    setTimeout(function () {
+		justOpacity("b8a062", 0, 1, 500, 0, 4);
+    }, 3000);
+}
+
+function dh9a1() {
+	$("#page8a41").fadeIn(200);
+    rotateScale("b8a020", 97, 591, 97, 79.6, 0, 1, 0, 0, 0, 1, 1300, 300, 0, 1);
+    rotateScale("b8a021", 427, 591, 427, 79.6, 0, 1, 0, 0, 0, 1, 1300, 500, 0, 1);
+    rotateScale("b8a022", 28, 591, 28, 146, 0, 1, 0, 0, 0, 1, 1300, 800, 0, 1);
+    rotateScale("b8a023", 320, 591, 320, 146, 0, 1, 0, 0, 0, 1, 1300, 900, 0, 1);
+    rotateScale("b8a024", 53, 591, 53, 213, 0, 1, 0, 0, 0, 1, 1300, 1100, 0, 1);
+    rotateScale("b8a025", 514, 591, 514, 206, 0, 1, 0, 0, 0, 1, 1300, 1400, 0, 1);
+    rotateScale("b8a026", 99, 591, 99, 275, 0, 1, 0, 0, 0, 1, 1300, 1500, 0, 1);
+    rotateScale("b8a027", 405, 591, 405, 275, 0, 1, 0, 0, 0, 1, 1300, 1700, 0, 1);
+    rotateScale("b8a028", 10, 730, 10, 730, 0, 1, 0, 0, 0, 1, 800, 2000, 0, 4);
+}
+
+function dh9a2() {
+    $("#page8a42").fadeIn(200);
+    rotateScale("b8a030", 97, 591, 97, 79.6, 0, 1, 0, 0, 0, 1, 1300, 300, 0, 1);
+    rotateScale("b8a031", 427, 591, 427, 79.6, 0, 1, 0, 0, 0, 1, 1300, 500, 0, 1);
+    rotateScale("b8a032", 28, 591, 28, 146, 0, 1, 0, 0, 0, 1, 1300, 800, 0, 1);
+    rotateScale("b8a033", 320, 591, 320, 146, 0, 1, 0, 0, 0, 1, 1300, 900, 0, 1);
+    rotateScale("b8a034", 53, 591, 53, 213, 0, 1, 0, 0, 0, 1, 1300, 1100, 0, 1);
+    rotateScale("b8a035", 514, 591, 514, 206, 0, 1, 0, 0, 0, 1, 1300, 1400, 0, 1);
+    rotateScale("b8a036", 99, 591, 99, 275, 0, 1, 0, 0, 0, 1, 1300, 1500, 0, 1);
+    rotateScale("b8a037", 405, 591, 405, 275, 0, 1, 0, 0, 0, 1, 1300, 1700, 0, 1);
+    rotateScale("b8a038", 45, 730, 45, 730, 0, 1, 0, 0, 0, 1, 800, 2000, 0, 4);
+}
+
+function dh9a3() {
+    $("#page8a43").fadeIn(200);
+    rotateScale("b8a040", 97, 591, 97, 79.6, 0, 1, 0, 0, 0, 1, 1300, 300, 0, 1);
+    rotateScale("b8a041", 427, 591, 427, 79.6, 0, 1, 0, 0, 0, 1, 1300, 500, 0, 1);
+    rotateScale("b8a042", 28, 591, 28, 146, 0, 1, 0, 0, 0, 1, 1300, 800, 0, 1);
+    rotateScale("b8a043", 320, 591, 320, 146, 0, 1, 0, 0, 0, 1, 1300, 900, 0, 1);
+    rotateScale("b8a044", 53, 591, 53, 213, 0, 1, 0, 0, 0, 1, 1300, 1100, 0, 1);
+    rotateScale("b8a045", 514, 591, 514, 206, 0, 1, 0, 0, 0, 1, 1300, 1400, 0, 1);
+    rotateScale("b8a046", 99, 591, 99, 275, 0, 1, 0, 0, 0, 1, 1300, 1500, 0, 1);
+    rotateScale("b8a047", 405, 591, 405, 275, 0, 1, 0, 0, 0, 1, 1300, 1700, 0, 1);
+    rotateScale("b8a048", 10, 730, 10, 730, 0, 1, 0, 0, 0, 1, 800, 2000, 0, 4);
+}
+
+function dh9a4() {
+    $("#page8a44").fadeIn(200);
+    rotateScale("b8a050", 97, 591, 97, 79.6, 0, 1, 0, 0, 0, 1, 1300, 300, 0, 1);
+    rotateScale("b8a051", 427, 591, 427, 79.6, 0, 1, 0, 0, 0, 1, 1300, 500, 0, 1);
+    rotateScale("b8a052", 28, 591, 28, 146, 0, 1, 0, 0, 0, 1, 1300, 800, 0, 1);
+    rotateScale("b8a053", 320, 591, 320, 146, 0, 1, 0, 0, 0, 1, 1300, 900, 0, 1);
+    rotateScale("b8a054", 53, 591, 53, 213, 0, 1, 0, 0, 0, 1, 1300, 1100, 0, 1);
+    rotateScale("b8a055", 514, 591, 514, 206, 0, 1, 0, 0, 0, 1, 1300, 1400, 0, 1);
+    rotateScale("b8a056", 99, 591, 99, 275, 0, 1, 0, 0, 0, 1, 1300, 1500, 0, 1);
+    rotateScale("b8a057", 405, 591, 405, 275, 0, 1, 0, 0, 0, 1, 1300, 1700, 0, 1);
+    rotateScale("b8a058", 55, 730, 55, 730, 0, 1, 0, 0, 0, 1, 800, 2000, 0, 4);
+}
 
 
 function dh888(typenumber) {
@@ -627,10 +751,15 @@ $("#b8011").on("click", function () {
 	}
 });
 
-//留级重考
+//生成性格标签
 $("#b8a010a").on("click", function() {
-    window.location.reload();
+    dh999();
 });
+
+//返回首页b8a062
+ $("#b8a062").on("click", function() {
+     window.location.reload();
+ });
 //
 // //抽取红包
 // $("#b8006").on("click", function() {
@@ -659,10 +788,15 @@ $("#b10004").on("click", function() {
 	$("#page10").fadeOut(500);
 });
 
-
+//不参与活动
 $("#b8004").on("click", function() {
-	$("#page8a").fadeIn(500);
-    $("#page8a3").fadeIn(500);
+	//alert("clicked");
+	$("#page8").fadeIn(200);
+    $("#page8a").fadeIn(200);
+    $("#page8a4").fadeIn(200);
+    //$("#b8a060").attr("src", my_head_img);
+    $("#b8a061").html(my_nickname);
+	dh999();
 });
 
 //打开信息登记页面
@@ -1031,6 +1165,7 @@ function sfs() {
 
 	setTimeout(function() {
 		dh888(typenumber);
+		type = typenumber;
 		//dh888(1);
 	}, 3000);
 
@@ -1062,6 +1197,7 @@ $(".ppdx").on("click", function (e) {
 		$("#page8b").fadeOut(500);
 		$("#page8a1").fadeOut(500);
 		//console.log($(this).attr("src"));
+		my_avatar = data.my_avatar;
 		$("#b8a009a").attr("src", data.my_avatar);
 		$("#b8a009b").attr("src", data.lover_avatar);
 		$("#page8a2").fadeIn(500);
@@ -2056,6 +2192,26 @@ function saleDTou(x, y, imgid) {
     document.getElementById(imgid).style.height = imh + "px";
     document.getElementById(imgid).style.left = x + "px";
     document.getElementById(imgid).style.top = y + "px";
+}
+
+
+function saleAvatar(x, y, imgid, w, h) {
+
+    var imw = w;
+    var imh = h;
+
+    imw = imw * sfw;
+    imh = imh * sfh;
+
+    x = x * sfw;
+    y = y * sfh;
+
+    document.getElementById(imgid).style.width = imw + "px";
+    document.getElementById(imgid).style.height = imh + "px";
+    document.getElementById(imgid).style.left = x + "px";
+    document.getElementById(imgid).style.top = y + "px";
+    document.getElementById(imgid).style.borderRadius = "10px";
+
 }
 
 

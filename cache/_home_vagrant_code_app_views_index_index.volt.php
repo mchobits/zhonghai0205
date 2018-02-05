@@ -15,6 +15,8 @@
 <body>
 <script type="text/javascript">
     var baseUrl = "<?= $baseURL ?>";
+    var my_head_img = "<?= $user->head_img_url ?>";
+    var my_nickname = " <?= $user->nickname ?>";
 </script>
 <div id="all" style="position: absolute;overflow:hidden">
 	<div id="jiazai" style="display: block;">
@@ -415,7 +417,7 @@
 				<img src="img3/b8a001bb.png"     id="b8a007"  style="position: absolute;opacity:1"/>
 				<img src="img3/8a1005.png"     id="b8a008"  style="position: absolute;opacity:1"/>
 				<img src="img3/lqlw.png" id="b8a010"  style="position: absolute;opacity:1" class="yy"/>
-				<img src="img3/fhsy.png" id="b8a010a"  style="position: absolute;opacity:1" class="yy"/>
+				<img src="img3/build_xgbq.png" id="b8a010a"  style="position: absolute;opacity:1" class="yy"/>
 				<img id="b8a009a"  src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
 				<img id="b8a009b"  src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
 
@@ -440,6 +442,59 @@
 			 left: -420px;
 			 top: 150px;
 			font-style:italic;">60
+			</div>
+
+			<div id="page8a4" style="position: absolute;display: none">
+				<img id="b8a016" src="img4/0000.png" style="position: absolute;" />
+				<div id="page8a41" style="position: absolute;display:none;">
+					<img src="img4/101.png" id="b8a020" style="position: absolute;opacity: 0" />
+					<img src="img4/102.png" id="b8a021" style="position: absolute;opacity: 0" />
+					<img src="img4/103.png" id="b8a022" style="position: absolute;opacity: 0" />
+					<img src="img4/104.png" id="b8a023" style="position: absolute;opacity: 0" />
+					<img src="img4/105.png" id="b8a024" style="position: absolute;opacity: 0" />
+					<img src="img4/106.png" id="b8a025" style="position: absolute;opacity: 0" />
+					<img src="img4/107.png" id="b8a026" style="position: absolute;opacity: 0" />
+					<img src="img4/108.png" id="b8a027" style="position: absolute;opacity: 0" />
+					<img src="img4/109.png" id="b8a028" style="position: absolute;opacity: 0" />
+				</div>
+				<div id="page8a42" style="position: absolute;display:none;">
+					<img src="img4/201.png" id="b8a030" style="position: absolute;opacity: 0" />
+					<img src="img4/202.png" id="b8a031" style="position: absolute;opacity: 0" />
+					<img src="img4/203.png" id="b8a032" style="position: absolute;opacity: 0" />
+					<img src="img4/204.png" id="b8a033" style="position: absolute;opacity: 0" />
+					<img src="img4/205.png" id="b8a034" style="position: absolute;opacity: 0" />
+					<img src="img4/206.png" id="b8a035" style="position: absolute;opacity: 0" />
+					<img src="img4/207.png" id="b8a036" style="position: absolute;opacity: 0" />
+					<img src="img4/208.png" id="b8a037" style="position: absolute;opacity: 0" />
+					<img src="img4/209.png" id="b8a038" style="position: absolute;opacity: 0" />
+				</div>
+				<div id="page8a43" style="position: absolute;display:none;">
+					<img src="img4/301.png" id="b8a040" style="position: absolute;opacity: 0" />
+					<img src="img4/302.png" id="b8a041" style="position: absolute;opacity: 0" />
+					<img src="img4/303.png" id="b8a042" style="position: absolute;opacity: 0" />
+					<img src="img4/304.png" id="b8a043" style="position: absolute;opacity: 0" />
+					<img src="img4/305.png" id="b8a044" style="position: absolute;opacity: 0" />
+					<img src="img4/306.png" id="b8a045" style="position: absolute;opacity: 0" />
+					<img src="img4/307.png" id="b8a046" style="position: absolute;opacity: 0" />
+					<img src="img4/308.png" id="b8a047" style="position: absolute;opacity: 0" />
+					<img src="img4/309.png" id="b8a048" style="position: absolute;opacity: 0" />
+				</div>
+				<div id="page8a44" style="position: absolute;display:none;">
+					<img src="img4/401.png" id="b8a050" style="position: absolute;opacity: 0" />
+					<img src="img4/402.png" id="b8a051" style="position: absolute;opacity: 0" />
+					<img src="img4/403.png" id="b8a052" style="position: absolute;opacity: 0" />
+					<img src="img4/404.png" id="b8a053" style="position: absolute;opacity: 0" />
+					<img src="img4/405.png" id="b8a054" style="position: absolute;opacity: 0" />
+					<img src="img4/406.png" id="b8a055" style="position: absolute;opacity: 0" />
+					<img src="img4/407.png" id="b8a056" style="position: absolute;opacity: 0" />
+					<img src="img4/408.png" id="b8a057" style="position: absolute;opacity: 0" />
+					<img src="img4/409.png" id="b8a058" style="position: absolute;opacity: 0" />
+				</div>
+
+				<img src="<?= $user->head_img_url ?>" id="b8a060" style="position: absolute;" />
+
+				<div id="b8a061" style="position: absolute;text-align: center;color: #490000;font-weight:bold"></div>
+				<img src="img3/fhsy.png" id="b8a062" class="yy" style="position: absolute;opacity: 0" />
 			</div>
 		</div>
 		<div id="page8b" style="display: none">
@@ -556,6 +611,8 @@
         localId: [],
         serverId: []
     };
+
+
 
     var url = window.location.href;
     if(url.split("from").length>=2){
