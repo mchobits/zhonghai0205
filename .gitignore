@@ -2,3 +2,4 @@
 /config/development/
 /.env
 .env
+.DS_Store
