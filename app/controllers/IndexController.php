@@ -60,30 +60,23 @@ class IndexController extends ControllerBase
                 'openCard'
             ), false, false, true);
 
-        $this->session->set('wxconfig', $wxconfig);
+            $this->session->set('wxconfig', $wxconfig);
 
             $this->view->disableLevel(
                 View::LEVEL_MAIN_LAYOUT
             );
-//            $this->view->setMainView('index/index');
-//        } else {
-//            $weixin = $this->easywechat;
-//
-//            $js = $weixin->jssdk;
-//
-//            $this->view->wxconfig = $js->buildConfig(
-//                array('checkJsApi',
-//                    'openLocation',
-//                    'getLocation',
-//                    'onMenuShareTimeline',
-//                    'onMenuShareAppMessage',
-//                    'hideAllNonBaseMenuItem',
-//                ), false);
-//            // echo "请在微信端打开此页面";
-//
-//            $this->view->setMainView('index/not_wechat');
-//        }
 
+        $user_id = intval($this->session->get('user_id'));
+        $user = Members::findFirst(
+            [
+                'conditions' => 'id = ?1',
+                'bind' => [
+                    1 => $user_id,
+                ]
+            ]
+        );
+
+        $this->view->setVar("user", $user);
         $this->view->setMainView("index/index");
     }
 

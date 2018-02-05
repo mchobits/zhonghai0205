@@ -52,6 +52,15 @@ function jiazaibiu() {
 		sfw = pmw / bgw;
 		sfh = pmh / bgh;
 
+		sale(0, 0, "b900");
+        sale(90, 250, "b901");
+        sale(525, 787, "b902");
+        sale(548, 658, "b903");
+        sale(320, 656, "b904");
+        sale(484, 328, "b905");
+        sale(405, 222, "b906");
+        sale(346, 335, "b907");
+
 		sale(0, 0, "a1001");
 		// sale(470, 395, "a1002");
 		// sale(440, 395, "a1003");
@@ -297,8 +306,11 @@ function jiazaibiu() {
 		sale(230, 454, "b1004");
 		//sale(420, 900, "b1005");
 		//sale(50, 900, "b1006");
-		sale(20, 260, "b1007");
-		// sale(20, 620, "b1008");
+		sale(40, 200, "b1007");
+		sale(40, 620, "b1008");
+
+        sale(150, 300, "b1009");
+
 		/*rotateScale("a2005",-400,-300,-580,-450,0.5,1,0,0,1,1,0,0,0,4);*/
 		salekj(0, 0, "kj");
 
@@ -326,6 +338,10 @@ function jiazaibiu() {
 		//sale(50, 40, "b8002a4");
 		sale(-3, 700, "b8003a4");
 		salefs(-420, 150, "fensunumber");
+
+        salefs2(-260, 360, "nickname_div");
+        salefs2(-260, 640, "fenshu_div");
+
 		sale(-3, 628, "b8004");
 		sale(-3, 650, "b8005");
 		//sale(10, 610, "b8006");
@@ -354,7 +370,8 @@ function jiazaibiu() {
         saleSTou(382, 575, "b8a009b");
         //sale(70, 170, "b8a009");
         // sale(200, 700, "b8a010");
-        sale(210, 800, "b8a010");
+        sale(110, 800, "b8a010");
+        sale(345, 800, "b8a010a");
 
         sale(0, 0, "b8a011");
         sale(259, 63, "b8a012");
@@ -610,10 +627,10 @@ $("#b8011").on("click", function () {
 	}
 });
 
-// //留级重考
-// $("#b8007,#b12005").on("click", function() {
-// 	window.location.replace("http://www.i-orange-xf.com/huanyuhui/c/i");
-// });
+//留级重考
+$("#b8a010a").on("click", function() {
+    window.location.reload();
+});
 //
 // //抽取红包
 // $("#b8006").on("click", function() {
@@ -653,10 +670,16 @@ $("#b8005").on("click", function() {
 	$("#page9").fadeIn(500);
 });
 
-//打开信息登记页面
+//分数
+var paihangbangOpened = false;
 $("#b1008").on("click", function() {
-	paihangbang();
-
+	if (paihangbangOpened == false) {
+        $("#paihangbang").fadeIn(500);
+        paihangbangOpened = true;
+	} else {
+        $("#paihangbang").fadeOut(500);
+        paihangbangOpened = false;
+	}
 });
 
 
@@ -794,19 +817,35 @@ function build_pipei_list(data) {
 
 function startdh() {
 	$("#logo1").fadeOut(500);
-	setTimeout(function() {
-		changeHeight("kj", 0, 0, 0, 0, 0, 1060, 1000, 500, 4);
 
+
+
+	setTimeout(function() {
+
+		rotateScale("b901", 90, 250, 90, 250, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1);
+		rotateScale("b902", 525, 787, 525, 787, 0, 1, 0, 0, 0, 1, 900, 400, 0, 1);
+        rotateScale("b903", 548, 658, 548, 658, 0, 1, 0, 0, 0, 1, 900, 1000, 0, 1);
+        rotateScale("b904", 320, 656, 320, 656, 0, 1, 0, 0, 0, 1, 900, 1500, 0, 1);
+        rotateScale("b905", 484, 328, 484, 328, 0, 1, 0, 0, 0, 1, 900, 700, 0, 1);
+        rotateScale("b906", 405, 222, 405, 222, 0, 1, 0, 0, 0, 1, 900, 1300, 0, 1);
+        rotateScale("b907", 346, 335, 346, 335, 0, 1, 0, 0, 0, 1, 900, 1800, 0, 1);
+
+	}, 500);
+
+	setTimeout(function() {
+		//$("#age0").fadeOut(500);
+        $("#age1").fadeIn(1000);
+        changeHeight("kj", 0, 0, 0, 0, 0, 1060, 1000, 500, 4);
 		setTimeout(function() {
 			//rotateScale("b1003", -3, 140, -3, 140, 0, 1, 0, 0, 0, 1, 700, 200, 0, 1);
 			rotateScale("b1003", 108, 140, 208, 140, 0, 1, 0, 0, 0, 1, 700, 200, 0, 1);
 			rotateScale("b1004", 230, 454, 230, 454, 0, 1, 0, 0, 0, 1, 700, 600, 0, 1);
 			//rotateScale("b1005", 420, 900, 420, 900, 0, 1, 0, 0, 0, 1, 700, 1000, 0, 1);
 			//rotateScale("b1006", 50, 900, 50, 900, 0, 1, 0, 0, 0, 1, 700, 1400, 0, 1);
-			rotateScale("b1007", 120, 260, 20, 260, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
-			//rotateScale("b1008", 120, 620, 20, 620, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
+			rotateScale("b1007", 120, 200, 40, 200, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
+			rotateScale("b1008", 120, 620, 40, 620, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
 		}, 1500);
-	}, 1000);
+	}, 3500);
 }
 
 var ceshifs = 0;
@@ -1958,6 +1997,25 @@ function salefs(x, y, imgid) {
 	document.getElementById(imgid).style.height = imh + "px";
 	document.getElementById(imgid).style.left = x + "px";
 	document.getElementById(imgid).style.top = y + "px";
+}
+
+function salefs2(x, y, imgid) {
+
+    var imw = 1060;
+    var imh = 100;
+    var fontSize = 40 * sfw;
+
+    imw = imw * sfw;
+    imh = imh * sfh;
+
+    x = x * sfw;
+    y = y * sfh;
+
+    document.getElementById(imgid).style["font-size"] = fontSize + "px";
+    document.getElementById(imgid).style.width = imw + "px";
+    document.getElementById(imgid).style.height = imh + "px";
+    document.getElementById(imgid).style.left = x + "px";
+    document.getElementById(imgid).style.top = y + "px";
 }
 
 function saleSTou(x, y, imgid) {

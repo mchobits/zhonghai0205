@@ -24,6 +24,19 @@
 		</div>
 	</div>
 	<div id="content" style="display: none">
+		<div id="age0" style="display: none">
+			<img src="img2/900.png"     id="b900"  style="position: absolute;"/>
+			<img src="img2/901.png"     id="b901"  style="position: absolute;"/>
+			<img src="img2/902.png"     id="b902"  style="position: absolute;opacity:0;" class="yy"/>
+
+			<img src="img2/903.png"     id="b903"  style="position: absolute;opacity:0;" class="yy"/>
+			<img src="img2/904.png"     id="b904"  style="position: absolute;opacity:0" class="yy"/>
+
+			<img src="img2/905.png"     id="b905"  style="position: absolute;opacity:0;" class="yy"/>
+			<img src="img2/906.png"     id="b906"  style="position: absolute;opacity:0;" class="yy"/>
+			<img src="img2/907.png"     id="b907"  style="position: absolute;opacity:0;" class="yy"/>
+
+		</div>
 		<div id="age1" style="display: none">
 			<img src="img2/107.png"     id="b1001"  style="position: absolute;"/>
 			<div id="kj" style="position: absolute;overflow:hidden">
@@ -34,7 +47,35 @@
 			
 			
 			<img src="img2/102.png"     id="b1007"  style="position: absolute;opacity:0" class="yy"/>
-			
+			<img src="img2/102a.png"     id="b1008"  style="position: absolute;opacity:0" class="yy"/>
+
+			<div id="paihangbang" style="position: absolute;display:none;">
+				<img src="img3/paihangbang.png"     id="b1009"  style="position: absolute;"/>
+				<div id="nickname_div" style="
+			position: absolute;
+			 text-align: center;
+			 color:#000000;
+			 font-size: 40px;
+			 font-weight: bold;
+			 width: 1060px;
+			 height: 100px;
+			 left: -260px;
+			 top: 360px;
+			" class="xzfs"><?= $user->nickname ?>
+				</div>
+				<div id="fenshu_div" style="
+			position: absolute;
+			 text-align: center;
+			 color:#000000;
+			 font-size: 40px;
+			 font-weight: bold;
+			 width: 1060px;
+			 height: 100px;
+			 left: -260px;
+			 top: 640px;
+			" class="xzfs"><?= $user->result_point ?>
+				</div>
+			</div>
 		</div>
 
 		<div id="page1" style="display: none">
@@ -80,18 +121,7 @@
 
 			<div id="dat13" style="display: none">
 				<img src="img/1406.png"     id="a1027"  style="position: absolute;opacity:0"/>
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+
 			</div>
 		</div>
 
@@ -115,28 +145,6 @@
 				<img src="img/2201c.png"  id="a2006"  style="position: absolute;opacity:0"/>
 				<img src="img/2201d.png"  id="a2006b"  style="position: absolute;opacity:0"/>
 
-				
-				
-				
-				
-				
-				
-				
-				
-				
-
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 			</div>
 			<div id="dat22" style="display: none">
 
@@ -406,9 +414,10 @@
 				<img src="img3/ppcg.png"     id="b8a006"  style="position: absolute;opacity:1"/>
 				<img src="img3/b8a001bb.png"     id="b8a007"  style="position: absolute;opacity:1"/>
 				<img src="img3/8a1005.png"     id="b8a008"  style="position: absolute;opacity:1"/>
-				<img src="img3/mmm.png" id="b8a010"  style="position: absolute;opacity:1" class="yy"/>
-				<img id="b8a009a"  src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
-				<img id="b8a009b"  src="img3/0.jpg" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img src="img3/lqlw.png" id="b8a010"  style="position: absolute;opacity:1" class="yy"/>
+				<img src="img3/fhsy.png" id="b8a010a"  style="position: absolute;opacity:1" class="yy"/>
+				<img id="b8a009a"  src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
+				<img id="b8a009b"  src="img3/no_pic.png" style="width: 100px; height: 100px;border-radius:15px;position: absolute;opacity:1"/>
 
 			</div>
 
@@ -563,7 +572,7 @@
 
             setTimeout(function(){
                 $("#content").fadeIn(1000);
-                $("#age1").fadeIn(1000);
+                $("#age0").fadeIn(1000);
                 startdh();
             },2000);
 
