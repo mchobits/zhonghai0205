@@ -18,15 +18,15 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="696">
-                  <caret line="2005" column="20" lean-forward="false" selection-start-line="2005" selection-start-column="20" selection-end-line="2005" selection-end-column="20" />
+                <state relative-caret-position="351">
+                  <caret line="686" column="9" lean-forward="false" selection-start-line="686" selection-start-column="4" selection-end-line="686" selection-end-column="9" />
                   <folding>
-                    <marker date="1517812028045" expanded="true" signature="12735:12745" ph="..." />
-                    <marker date="1517812028045" expanded="true" signature="12798:12808" ph="..." />
-                    <marker date="1517812028045" expanded="true" signature="12850:12860" ph="..." />
+                    <marker date="1517812240787" expanded="true" signature="12735:12745" ph="..." />
+                    <marker date="1517812240787" expanded="true" signature="12798:12808" ph="..." />
+                    <marker date="1517812240787" expanded="true" signature="12850:12860" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -42,7 +42,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.volt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/index/index.volt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="50">
@@ -105,11 +105,11 @@
             <entry file="file://$PROJECT_DIR$/public/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="351">
-                  <caret line="308" column="19" lean-forward="false" selection-start-line="308" selection-start-column="19" selection-end-line="308" selection-end-column="19" />
+                  <caret line="308" column="28" lean-forward="false" selection-start-line="308" selection-start-column="23" selection-end-line="308" selection-end-column="28" />
                   <folding>
-                    <marker date="1517812028045" expanded="true" signature="12735:12745" ph="..." />
-                    <marker date="1517812028045" expanded="true" signature="12798:12808" ph="..." />
-                    <marker date="1517812028045" expanded="true" signature="12850:12860" ph="..." />
+                    <marker date="1517812240787" expanded="true" signature="12735:12745" ph="..." />
+                    <marker date="1517812240787" expanded="true" signature="12798:12808" ph="..." />
+                    <marker date="1517812240787" expanded="true" signature="12850:12860" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -121,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>env</find>
       <find>count</find>
       <find>J_menuItem</find>
       <find>search</find>
@@ -149,8 +148,9 @@
       <find>salediv</find>
       <find>paihangbang</find>
       <find>b1008</find>
-      <find>fs</find>
       <find>salefs</find>
+      <find>fs</find>
+      <find>b1007</find>
     </findStrings>
     <replaceStrings>
       <replace>devision.gdylfw.com</replace>
@@ -353,12 +353,12 @@
       <workItem from="1517488479316" duration="9736000" />
       <workItem from="1517532304792" duration="20793000" />
       <workItem from="1517624027636" duration="53584000" />
-      <workItem from="1517805307909" duration="6348000" />
+      <workItem from="1517805307909" duration="6536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129995000" />
+    <option name="totallyTimeSpent" value="130183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2179" height="1240" extended-state="0" />
@@ -438,9 +438,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517812028045" expanded="true" signature="12735:12745" ph="..." />
-            <marker date="1517812028045" expanded="true" signature="12798:12808" ph="..." />
-            <marker date="1517812028045" expanded="true" signature="12850:12860" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12735:12745" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12798:12808" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12850:12860" ph="..." />
           </folding>
         </state>
       </provider>
@@ -481,9 +481,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517812028045" expanded="true" signature="12735:12745" ph="..." />
-            <marker date="1517812028045" expanded="true" signature="12798:12808" ph="..." />
-            <marker date="1517812028045" expanded="true" signature="12850:12860" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12735:12745" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12798:12808" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12850:12860" ph="..." />
           </folding>
         </state>
       </provider>
@@ -825,11 +825,11 @@
     <entry file="file://$PROJECT_DIR$/public/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="308" column="19" lean-forward="false" selection-start-line="308" selection-start-column="19" selection-end-line="308" selection-end-column="19" />
+          <caret line="686" column="9" lean-forward="false" selection-start-line="686" selection-start-column="4" selection-end-line="686" selection-end-column="9" />
           <folding>
-            <marker date="1517812028045" expanded="true" signature="12735:12745" ph="..." />
-            <marker date="1517812028045" expanded="true" signature="12798:12808" ph="..." />
-            <marker date="1517812028045" expanded="true" signature="12850:12860" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12735:12745" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12798:12808" ph="..." />
+            <marker date="1517812240787" expanded="true" signature="12850:12860" ph="..." />
           </folding>
         </state>
       </provider>
