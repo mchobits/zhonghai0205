@@ -41,6 +41,20 @@ class GeXingPic
         //imagepng($whiteImgObj, "./bbbbb.png");
     }
 
+    public function getTextResource() {
+        $str = "梁珩儿mm";
+        echo mb_strlen($str,'UTF-8');
+        $im =imagecreatetruecolor(280, 55);
+        imagesavealpha($im, true);
+        $bg = imagecolorallocatealpha($im, 255, 0, 0, 127);
+        imagefill($im, 0, 0, $bg);
+        $col = imagecolorallocate($im, 0, 51, 102);
+        $font="yaoti.ttf"; //字体所放目录
+        //$come=iconv("gb2312","utf-8","水火不容");
+        imagettftext($im,40,0,0,45,$col,$font,"水火不容"); //写 TTF 文字到图中
+        imagepng($im, "./ddd.png");
+    }
+
     public function gaussian_blur($srcImg, $savepath = null, $savename = null, $blurFactor = 3)
     {
         $gdImageResource = $this->image_create_from_ext($srcImg);
