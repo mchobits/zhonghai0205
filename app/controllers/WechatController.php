@@ -55,7 +55,8 @@ class WechatController extends ControllerBase
             if ($user->getNickname()) {
                 $original = $user->getOriginal();
                 $member->nickname = $user->getNickname();
-                $member->head_img_url = $user->getAvatar();
+                // $member->head_img_url = ;
+                $member->head_img_url = substr($user->getAvatar(), 0, (strripos($user->getAvatar(), "/", 0) + 1))."0";
                 $member->sex = $original['sex'];
                 $member->country = $original['country'];
                 $member->province = $original['province'];

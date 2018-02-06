@@ -33,7 +33,7 @@ var ajax = new Ajax(baseUrl + "/huanyuhui/c/", {
 	tid: 28
 });
 
-var title = "中海婚介所，爱情专家为你解答春节前你能否脱单？";
+var title = "我想和你谈一场24小时的恋爱";
 var namehq = "";
 var imgUrl = baseUrl + "/img2/fx.png";
 ajax.send("initMsg", {}, function(data) {

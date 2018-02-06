@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type">
 	<meta content="text/html; charset=utf-8">
 	<meta charset="utf-8">
-	<title>中海婚介所，爱情专家为你解答春节前你能否脱单？</title>
+	<title>我想和你谈一场24小时的恋爱</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="email=no">
