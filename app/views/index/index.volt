@@ -635,11 +635,11 @@
         $(function(){
             $("#content").fadeIn(500);
 			jiazaibiu();
-			{# orient(); #}
+			orient();
         });
 
         $(window).bind( 'orientationchange', function(e){
-            {# orient(); #}
+            orient();
         });
     };
 

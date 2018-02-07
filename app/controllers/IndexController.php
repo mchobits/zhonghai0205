@@ -166,9 +166,9 @@ class IndexController extends ControllerBase
 
     public function pipeiAction()
     {
-        $data_id = $this->request->getPost("data_id", "int");
-        if ($this->request->isAjax() && $this->is_weixin() && $this->request->isPost()) {
 
+        if ($this->request->isAjax() && $this->is_weixin() && $this->request->isPost()) {
+            $data_id = $this->request->getPost("data_id", "int");
 
             $user_id = intval($this->session->get('user_id'));
             $user = Members::findFirst(
@@ -210,36 +210,37 @@ class IndexController extends ControllerBase
 
     public function buildGeXingImgAction()
     {
-        $user_id = intval($this->session->get('user_id'));
-        $score = intval($this->session->get('member_score'));
-        //$head_img_url = $this->session->get('head_img_url');
+        if ($this->request->isAjax() && $this->is_weixin() && $this->request->isPost()) {
+            $user_id = intval($this->session->get('user_id'));
+            $score = intval($this->session->get('member_score'));
+            //$head_img_url = $this->session->get('head_img_url');
 
-        if ($user_id != 0 && $score != 0) {
+            if ($user_id != 0 && $score != 0) {
 
-            $member = Members::findFirst(
-                [
-                    'conditions' => 'id = ?1',
-                    'bind'       => [
-                        1 => $user_id,
+                $member = Members::findFirst(
+                    [
+                        'conditions' => 'id = ?1',
+                        'bind' => [
+                            1 => $user_id,
+                        ]
                     ]
-                ]
-            );
-            $filename = BASE_PATH.'/public/upload/avatar/' . $user_id . "_avatar.jpg";
+                );
+                $filename = BASE_PATH . '/public/upload/avatar/' . $user_id . "_avatar.jpg";
 
-            if (!file_exists($filename)) {
-                $this->downloadAvatar($member->head_img_url, $user_id);
+                if (!file_exists($filename)) {
+                    $this->downloadAvatar($member->head_img_url, $user_id);
+                }
+
+                $gexingImg = new GeXingPic();
+                $res = $gexingImg->build_xgt($user_id, $member->result_point, $member->nickname);
+
+                if ($res) {
+                    return $this->sendJson(["gx_pic" => "upload/gexing/" . $user_id . ".jpg"]);
+                } else {
+                    return $this->sendJson([]);
+                }
+
             }
-
-            $gexingImg = new GeXingPic();
-            $res = $gexingImg->build_xgt($user_id,  $member->result_point, $member->nickname);
-
-            if ($res) {
-                return $this->sendJson(["gx_pic" => "upload/gexing/".$user_id.".jpg"]);
-            } else {
-                return $this->sendJson([]);
-            }
-
-
         }
     }
 

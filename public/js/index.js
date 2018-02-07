@@ -572,23 +572,23 @@ wx.ready(function () {
 // 	});
 // }
 
-// function orient() {
-// 	if (window.orientation == 90 || window.orientation == -90) {
-// 		//ipad、iphone竖屏；Andriod横屏
-// 		$("#content").fadeOut(500);
-// 		$("#jiazai").fadeOut(500);
-// 		setTimeout(function() {
-// 			alert("请将手机锁定竖屏");
-// 		}, 500);
-//
-// 		return false;
-// 	} else if (window.orientation == 0 || window.orientation == 180) {
-// 		//ipad、iphone横屏；Andriod竖屏
-// 		$("#content").fadeIn(500);
-// 		jiazaibiu();
-// 		return false;
-// 	}
-// }
+function orient() {
+	if (window.orientation == 90 || window.orientation == -90) {
+		//ipad、iphone竖屏；Andriod横屏
+		$("#content").fadeOut(500);
+		$("#jiazai").fadeOut(500);
+		setTimeout(function() {
+			alert("请将手机锁定竖屏");
+		}, 500);
+
+		return false;
+	} else if (window.orientation == 0 || window.orientation == 180) {
+		//ipad、iphone横屏；Andriod竖屏
+		$("#content").fadeIn(500);
+		jiazaibiu();
+		return false;
+	}
+}
 
 function dh999() {
     $("#page8a4").fadeIn(200);
