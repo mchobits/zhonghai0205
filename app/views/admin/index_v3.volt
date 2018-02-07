@@ -32,10 +32,21 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <span class="label label-success pull-right"></span>
-                    <h5>测试用户数</h5>
+                    <h5>访问用户数</h5>
                 </div>
                 <div class="ibox-content">
                     <h1 class="no-margins">{{totalMember }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-success pull-right"></span>
+                    <h5>完成测试用户数</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">{{finish_member_count }}</h1>
                 </div>
             </div>
         </div>

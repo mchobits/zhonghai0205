@@ -31,8 +31,10 @@ class AdminController extends \Phalcon\Mvc\Controller
         }
 
         $member_count = $this->modelsManager->executeQuery('SELECT COUNT (1) totalMember FROM Members ');
+        $finish_member_count = $this->modelsManager->executeQuery('SELECT COUNT (1) totalMember FROM Members v WHERE v.result_point != 0');
         $man_member_count = $this->modelsManager->executeQuery('SELECT COUNT (1) totalMember FROM Members v WHERE v.sex = 1 AND v.join_event = 1 ');
         $girl_member_count = $this->modelsManager->executeQuery('SELECT COUNT (1) totalMember FROM Members v WHERE v.sex = 2 AND v.join_event = 1 ');
+        $this->view->setVar("finish_member_count",$finish_member_count[0]->totalMember);
         $this->view->setVar('totalMember', intval($member_count[0]->totalMember));
         $this->view->setVar('manTotalMember', intval($man_member_count[0]->totalMember));
         $this->view->setVar('girlTotalMember', intval($girl_member_count[0]->totalMember));
