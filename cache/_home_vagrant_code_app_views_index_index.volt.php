@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type">
 	<meta content="text/html; charset=utf-8">
 	<meta charset="utf-8">
-	<title>中海婚介所，爱情专家为你解答春节前你能否脱单？</title>
+	<title>我想和你谈一场24小时的恋爱</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="email=no">
@@ -330,7 +330,6 @@
 			<img src="img3/107-2.png"          id="b8001a"  style="position: absolute;"/>
 			<img src="img3/107-3.png"     id="b8002"  style="position: absolute;"/>
 			<div id="page81" style="display: block">
-
 				<img src="img3/1001.png"     id="b8003"  style="position: absolute;opacity:0"/>
 			</div>
 
@@ -360,6 +359,7 @@
 				<img src="img3/109.png"     id="b8004"  style="position: absolute;" />
 				<img src="img3/110.png"     id="b8005"  style="position: absolute;" />
 				<img src="img3/107-5.png"     id="b8011"  style="position: absolute;opacity: 1"/>
+				<img src="img3/107-5a.png"     id="b8011a"  style="position: absolute;opacity: 1"/>
 				
 				
 			</div>
@@ -368,11 +368,9 @@
 			<img src="img3/107-6.png"     id="b8012"  style="position: absolute;opacity: 1;display: none"/>
 		</div>
 
-
-
-
-
 		<img src="img/logo01.png"  id="logo1"  style="position: absolute;"/>
+
+		<img src="#" id="ge_xing_pic" alt="" style="position: absolute;display: none;">
 
 		<div id="page9" style="display: none">
 			<img src="img3/8a1001.png"         id="b9001"  style="position: absolute;"/>

@@ -68,6 +68,14 @@ $router->add(
     ]
 );
 
+$router->add(
+    '/huanyuhui/c/getGeXingPic',
+    [
+        'controller' => 'index',
+        'action' => 'buildGeXingImg'
+    ]
+);
+
 $router->add('/admin', [
     'controller' => 'admin',
     'action' => 'index'

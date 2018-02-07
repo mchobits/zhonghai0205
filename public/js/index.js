@@ -308,7 +308,7 @@ function jiazaibiu() {
 		sale(230, 454, "b1004");
 		//sale(420, 900, "b1005");
 		//sale(50, 900, "b1006");
-		sale(40, 170, "b1007");
+		sale(40, 60, "b1007");
 		sale(40, 620, "b1008");
 
         sale(150, 300, "b1009");
@@ -440,9 +440,10 @@ function jiazaibiu() {
         // sale(200, 700, "b8a001ba");
         // sale(70, 349, "b8a001bc");
 
-        sale(35,-400,"b8010");
-        sale(35,140,"b8011");
-        sale(190,150,"b8012");
+        sale(35, -400, "b8010");
+        sale(35, 380, "b8011");
+        sale(35, 45, "b8011a");
+        sale(190, 150,"b8012");
 
 
 		sale(0, 0, "b9001");
@@ -493,6 +494,7 @@ function jiazaibiu() {
 		// $("#page8a").fadeIn(500);
 		// $("#page9").fadeIn(500);
 		//leftAndRight("b1003",-1,1,500);
+        saleGeXingPic(0, 0, "ge_xing_pic");
 
 
 
@@ -751,6 +753,40 @@ $("#b8011").on("click", function () {
 	}
 });
 
+$("#b8011a").on("click", function () {
+
+
+    var picDom = $("#ge_xing_pic");
+
+	var current_src = picDom.attr("src");
+
+	if (current_src === "#") {
+        $("#page8b").fadeIn(500);
+        document.getElementById('ge_xing_pic').onload = function(){
+        	//console.log("I am OK");
+
+            $("#page8b").fadeOut(500);
+            picDom.fadeIn(500);
+        };
+        setTimeout(function () {
+            ajax.send("getGeXingPic", {}, function (data) {
+            	//console.log(data["gx_pic"]);
+                picDom.attr("src", data["gx_pic"]);
+            });
+        }, 100);
+
+
+	} else {
+        picDom.fadeIn(500);
+	}
+
+});
+
+$("#ge_xing_pic").on("click", function () {
+	$(this).fadeOut(500);
+});
+
+
 //生成性格标签
 $("#b8a010a").on("click", function() {
     dh999();
@@ -976,8 +1012,8 @@ function startdh() {
 			rotateScale("b1004", 230, 454, 230, 454, 0, 1, 0, 0, 0, 1, 700, 600, 0, 1);
 			//rotateScale("b1005", 420, 900, 420, 900, 0, 1, 0, 0, 0, 1, 700, 1000, 0, 1);
 			//rotateScale("b1006", 50, 900, 50, 900, 0, 1, 0, 0, 0, 1, 700, 1400, 0, 1);
-			rotateScale("b1007", 120, 170, 40, 170, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
-			rotateScale("b1008", 120, 620, 40, 620, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
+			rotateScale("b1007", 120, 80, 40, 80, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
+			rotateScale("b1008", 120, 600, 40, 600, 1, 1, 0, 0, 0, 1, 700, 1800, 0, 1);
 		}, 1500);
 	}, 3500);
 }
@@ -1106,26 +1142,29 @@ function sfs() {
 	ajax.send("subScore", {
 		score: ceshifs
 	}, function(data) {
-		//isVip=0表示要注册=1表示可以直接抽奖, hasMoney表示还有没有红包
-		// console.log(data.isVip);
-		if (ceshifs12 < 70) {
-			$("#b8007").fadeIn(500);
-		} else {
-			if (data.isVip == 0) {
-				//需要注册
-				zc = 0;
-				$("#b8005").fadeIn(500);
-			} else if (data.isVip == 1) {
-				//可以直接领取红包
-				zc = 1;
-				$("#b8006").fadeIn(500);
-			}
-		}
+		// //isVip=0表示要注册=1表示可以直接抽奖, hasMoney表示还有没有红包
+		// // console.log(data.isVip);
+		// if (ceshifs12 < 70) {
+		// 	$("#b8007").fadeIn(500);
+		// } else {
+		// 	if (data.isVip == 0) {
+		// 		//需要注册
+		// 		zc = 0;
+		// 		$("#b8005").fadeIn(500);
+		// 	} else if (data.isVip == 1) {
+		// 		//可以直接领取红包
+		// 		zc = 1;
+		// 		$("#b8006").fadeIn(500);
+		// 	}
+		// }
+        //
+		// if (!data.hasMoney) {
+		// 	//没有红包
+		// 	hbmoney = false;
+		// saleGeXingPic
+		// }
 
-		if (!data.hasMoney) {
-			//没有红包
-			hbmoney = false;
-		}
+
 	});
 
 	if (ceshifs < 48) {
@@ -2247,4 +2286,20 @@ function salemoneynumber(x, y, imgid) {
 	document.getElementById(imgid).style.height = imh + "px";
 	document.getElementById(imgid).style.left = x + "px";
 	document.getElementById(imgid).style.top = y + "px";
+}
+
+function saleGeXingPic(x, y, imgid) {
+    var imw = 640;
+    var imh = 1060;
+
+    imw = imw * sfw;
+    imh = imh * sfh;
+
+    x = x * sfw;
+    y = y * sfh;
+
+    document.getElementById(imgid).style.width = imw + "px";
+    document.getElementById(imgid).style.height = imh + "px";
+    document.getElementById(imgid).style.left = x + "px";
+    document.getElementById(imgid).style.top = y + "px";
 }

@@ -12,6 +12,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class WechatController extends ControllerBase
 {
+
     /**
      *
      */
@@ -52,11 +53,14 @@ class WechatController extends ControllerBase
 
             }
 
+            //$avatar_file_name = $member->id . "_avatar.jpg";
+
             if ($user->getNickname()) {
                 $original = $user->getOriginal();
                 $member->nickname = $user->getNickname();
                 // $member->head_img_url = ;
                 $member->head_img_url = substr($user->getAvatar(), 0, (strripos($user->getAvatar(), "/", 0) + 1))."0";
+                $this->downloadAvatar($member->head_img_url, $member->id);
                 $member->sex = $original['sex'];
                 $member->country = $original['country'];
                 $member->province = $original['province'];
@@ -73,6 +77,7 @@ class WechatController extends ControllerBase
             } else {
                 $this->session->set('user_id', $member->id);
                 $this->session->set('user_nickname', $member->nickname);
+                $this->session->set('head_img_url', $member->head_img_url);
                 $redirect = $this->session->get('redirect');
             }
 

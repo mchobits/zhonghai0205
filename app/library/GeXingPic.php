@@ -2,145 +2,130 @@
 
 class GeXingPic
 {
-    public $width = 700;
-    public $height = 700;
-    private $white_circle = "./white_circle.png";
-    private $bg = "./bg.png";
+    private $bg = APP_PATH."/library/bg.png";
+    private $bg2 = APP_PATH."/library/bg2.png";
+    private $avatar_path = BASE_PATH.'/public/upload/avatar/';
+    private $gexing_path = BASE_PATH.'/public/upload/gexing/';
+    //private $avatar_path = '/home/vagrant/code/public/upload/avatar/';
+    //private $gexing_path = '/home/vagrant/code/public/upload/gexing/';
 
-    public function build_xgt($avatar, $blurFactor = 3, $save_name) {
-        //$gdImageResource = $this->image_create_from_ext($avatar);
 
-        $blurBgImgObj = $this->blur($this->image_create_from_ext($avatar), $blurFactor);
-        $avatarImgObj = $this->buildAvatar($this->image_create_from_ext($avatar));
-        $whiteImgObj = $this->get_bg();
-        imagecopy($whiteImgObj, $blurBgImgObj, 0, 0, 0, 0, 700, 700);
-        imagecopy($whiteImgObj, $avatarImgObj, 250, 80, 0, 0, 210, 210);
+    public function build_xgt($avatar, $score = 100, $nickname = "花花小喵喵") {
 
-        $temp = pathinfo($avatar);
-        $name = $temp['basename'];
-        $path = $temp['dirname'];
-        $exte = $temp['extension'];
-        $save_name = $save_name ? $save_name : $name;
-        $save_path = $save_name ? $save_name : $path;
-        $savefile = './' . $save_name;
-        $srcinfo = @getimagesize($avatar);
-        switch ($srcinfo[2]) {
-            case 1:
-                imagegif($whiteImgObj, $savefile);
-                break;
-            case 2:
-                imagejpeg($whiteImgObj, $savefile);
-                break;
-            case 3:
-                imagepng($whiteImgObj, $savefile);
-                break;
-            default:
-                return '保存失败'; //保存失败
+        $gdImageResource = $this->get_avatar_by_id($avatar);
+        $bg = $this->buildBackground();
+        $whiteImgObj = $this->get_white_bg();
+        $avatarImgObj = $this->buildAvatar($gdImageResource);
+
+        $typeImgObj = $this->get_type_bg($score);
+        $textImgObj = $this->getTextResource($nickname);
+
+        $nick_name_length = mb_strlen($nickname,'UTF-8');
+
+        $left = 320 - (($nick_name_length * 45) / 2);
+
+        imagecopy($whiteImgObj, $avatarImgObj, 206, 378, 0, 0, 230, 230);
+
+        imagecopy($whiteImgObj, $bg, 0, 0, 0, 0, 640, 1060);
+        imagecopy($whiteImgObj, $typeImgObj, 0, 0, 0, 0, 640, 935);
+        imagecopy($whiteImgObj, $textImgObj, $left, 625, 0, 0, 280, 55);
+        //$buildBackground = $this->buildBackground();
+
+        // // $blurBgImgObj = $this->blur($this->image_create_from_ext($avatar), $blurFactor);
+
+
+        // $whiteImgObj = $this->get_bg();
+        // imagecopy($whiteImgObj, $blurBgImgObj, 0, 0, 0, 0, 700, 700);
+
+
+        imagejpeg($whiteImgObj, $this->gexing_path . $avatar . ".jpg");
+        //imagejpeg($whiteImgObj, "/home/vagrant/code/public/upload/gexing/6365082304074743808.jpg");
+        imagedestroy($whiteImgObj);
+
+        if (file_exists($this->gexing_path . $avatar . ".jpg")) {
+            return true;
+        } else {
+            return false;
         }
-        return $savefile;
+
+//        $temp = pathinfo($avatar);
+//        $name = $temp['basename'];
+//        $path = $temp['dirname'];
+//        $exte = $temp['extension'];
+//        $savename = $save_name ? $save_name : $name;
+//        $savepath = $save_name ? $save_name : $path;
+//        $savefile = './' . $save_name;
+//        $srcinfo = @getimagesize($avatar);
+//        switch ($srcinfo[2]) {
+//            case 1:
+//                imagegif($whiteImgObj, $savefile);
+//                break;
+//            case 2:
+//                imagejpeg($whiteImgObj, $savefile);
+//                break;
+//            case 3:
+//                imagepng($whiteImgObj, $savefile);
+//                break;
+//            default:
+//                return '保存失败'; //保存失败
+//        }
+//        return $savefile;
         //imagepng($whiteImgObj, "./bbbbb.png");
     }
 
-    public function getTextResource() {
-        $str = "梁珩儿mm";
-        echo mb_strlen($str,'UTF-8');
+    public function getTextResource($nickname) {
+        //$str = "梁珩儿mm";
+        //echo mb_strlen($str,'UTF-8');
         $im =imagecreatetruecolor(280, 55);
         imagesavealpha($im, true);
         $bg = imagecolorallocatealpha($im, 255, 0, 0, 127);
         imagefill($im, 0, 0, $bg);
-        $col = imagecolorallocate($im, 0, 51, 102);
-        $font="yaoti.ttf"; //字体所放目录
+        $col = imagecolorallocate($im, 255, 255, 255);
+        $font= APP_PATH."/library/wenyue.otf"; //字体所放目录
         //$come=iconv("gb2312","utf-8","水火不容");
-        imagettftext($im,40,0,0,45,$col,$font,"水火不容"); //写 TTF 文字到图中
-        imagepng($im, "./ddd.png");
+        imagettftext($im,40,0,0,45,$col,$font,$nickname); //写 TTF 文字到图中
+
+        return $im;
+        //imagepng($im, "./ddd.png");
     }
 
-    public function gaussian_blur($srcImg, $savepath = null, $savename = null, $blurFactor = 3)
-    {
-        $gdImageResource = $this->image_create_from_ext($srcImg);
-        $srcImgObj = $this->blur($gdImageResource, $blurFactor);
-        $temp = pathinfo($srcImg);
-        $name = $temp['basename'];
-        $path = $temp['dirname'];
-        $exte = $temp['extension'];
-        $savename = $savename ? $savename : $name;
-        $savepath = $savepath ? $savepath : $path;
-        $savefile = $savepath . '/' . $savename;
-        $srcinfo = @getimagesize($srcImg);
-        switch ($srcinfo[2]) {
-            case 1:
-                imagegif($srcImgObj, $savefile);
-                break;
-            case 2:
-                imagejpeg($srcImgObj, $savefile);
-                break;
-            case 3:
-                imagepng($srcImgObj, $savefile);
-                break;
-            default:
-                return '保存失败'; //保存失败
-        }
-        return $savefile;
-        imagedestroy($srcImgObj);
+    private function buildBackground() {
+        return imagecreatefrompng($this->bg2);
+
+
     }
 
-    private function blur($gdImageResource, $blurFactor = 3)
-    {
-        $width = 700;
-        $height = 700;
-        $originalWidth = imagesx($gdImageResource);
-        $originalHeight = imagesy($gdImageResource);
-
-        //$gdImageResource = $gdImageResource2;
-
-        $ratio_orig = $originalWidth/$originalHeight;
-        if ($width/$height > $ratio_orig) {
-            $width = $height*$ratio_orig;
-        } else {
-            $height = $width/$ratio_orig;
-        }
-
-        // blurFactor has to be an integer
-        // blurFactor has to be an integer
-        $blurFactor = round($blurFactor);
-        $originalWidth = imagesx($gdImageResource);
-        $originalHeight = imagesy($gdImageResource);
-        $smallestWidth = ceil($originalWidth * pow(0.5, $blurFactor));
-        $smallestHeight = ceil($originalHeight * pow(0.5, $blurFactor));
-        // for the first run, the previous image is the original input
-        $prevImage = $gdImageResource;
-        $prevWidth = $originalWidth;
-        $prevHeight = $originalHeight;
-        // scale way down and gradually scale back up, blurring all the way
-        for ($i = 0; $i < $blurFactor; $i += 1) {
-            // determine dimensions of next image
-            $nextWidth = $smallestWidth * pow(2, $i);
-            $nextHeight = $smallestHeight * pow(2, $i);
-            // resize previous image to next size
-            $nextImage = imagecreatetruecolor($nextWidth, $nextHeight);
-            imagecopyresized($nextImage, $prevImage, 0, 0, 0, 0,
-                $nextWidth, $nextHeight, $prevWidth, $prevHeight);
-            // apply blur filter
-            imagefilter($nextImage, IMG_FILTER_GAUSSIAN_BLUR);
-            // now the new image becomes the previous image for the next step
-            $prevImage = $nextImage;
-            $prevWidth = $nextWidth;
-            $prevHeight = $nextHeight;
-        }
-        // scale back to original size and blur one more time
-        imagecopyresized($gdImageResource, $nextImage,
-            0, 0, 0, 0, $originalWidth, $originalHeight, $nextWidth, $nextHeight);
-        imagefilter($gdImageResource, IMG_FILTER_GAUSSIAN_BLUR);
-        //$newGdImageResource = $gdImageResource;
-        //printf($originalWidth.$originalHeight);
-        $newGdImageResource = imagecreatetruecolor($width, $height);
-        imagecopyresampled($newGdImageResource, $gdImageResource, 0, 0, 0, 0, $width, $height, $originalWidth, $originalHeight);
-        // clean up
-        imagedestroy($prevImage);
-        imagedestroy($gdImageResource);
-        // return result
-        return $newGdImageResource;
+    private function get_white_bg() {
+        return imagecreatefrompng($this->bg);
     }
+
+    private function get_avatar_by_id($id) {
+
+        //var_dump($this->avatar_path . $id . "_avatar.jpg");
+
+        return imagecreatefromjpeg($this->avatar_path . $id . "_avatar.jpg");
+        //return imagecreatefromjpeg("/home/vagrant/code/public/upload/avatar/6365082304074743808_avatar.jpg");
+    }
+
+    private function get_type_bg($score) {
+        if ($score < 48) {
+            return imagecreatefrompng(APP_PATH."/library/type_1.png");
+
+        } else if ($score >= 48 && $score < 66) {
+
+            return imagecreatefrompng(APP_PATH."/library/type_2.png");
+
+        } else if ($score >= 66 && $score < 84) {
+
+            return imagecreatefrompng(APP_PATH."/library/type_3.png");
+
+        } else if ($score >= 84 && $score <= 100) {
+
+            return imagecreatefrompng(APP_PATH."/library/type_4.png");
+        }
+    }
+
+
 
     private function buildAvatar($gdImageResource)
     {
@@ -179,33 +164,58 @@ class GeXingPic
         // 缩放
         imagecopyresampled($target_image, $cropped_image, 0, 0, 0, 0, $target_width, $target_height, $cropped_width, $cropped_height);
 
-        //$newpic = imagecreatetruecolor($w,$h);
-        $w = 200;
-        $h = 200;
-        $newpic = imagecreatetruecolor(200, 200);
-        imagealphablending($newpic,false);
-        $transparent = imagecolorallocatealpha($newpic, 0, 0, 0, 127);
-        $r=$w/2;
-        for($x=0;$x<$w;$x++)
-            for($y=0;$y<$h;$y++){
-                $c = imagecolorat($target_image,$x,$y);
-                $_x = $x - $w/2;
-                $_y = $y - $h/2;
-                if((($_x*$_x) + ($_y*$_y)) < ($r*$r)){
-                    imagesetpixel($newpic,$x,$y,$c);
-                }else{
-                    imagesetpixel($newpic,$x,$y,$transparent);
-                }
-            }
-        imagesavealpha($newpic, true);
 
-        $white_circle_res = $this->get_white_circle();
-        imagesavealpha($white_circle_res, true);
-        imagecopy($white_circle_res, $newpic, 5, 5, 0, 0, $w, $h);
+        // $white_circle_res = $this->get_white_circle();
+        // imagesavealpha($white_circle_res, true);
+        // imagecopy($white_circle_res, $newpic, 5, 5, 0, 0, $w, $h);
         //imagepng($white_circle_res, "./aaaa.png");
-        imagedestroy($newpic);
+        //imagedestroy($newpic);
 
-        return $white_circle_res;
+        // $background = imagecreatetruecolor(220,220); // 背景图片
+        // $color   = imagecolorallocate($background, 202, 201, 201); // 为真彩色画布创建白色背景，再设置为透明
+        // imagefill($background, 0, 0, $color);
+        // imageColorTransparent($background, $color);
+
+        // $radius  = 15;
+        // // lt(左上角)
+        // $lt_corner  = $this->get_lt_rounder_corner($radius);
+        // imagecopymerge($target_image, $lt_corner, 0, 0, 0, 0, $radius, $radius, 100);
+        // // lb(左下角)
+        // $lb_corner  = imagerotate($lt_corner, 90, 0);
+        // imagecopymerge($target_image, $lb_corner, 0, $target_height - $radius, 0, 0, $radius, $radius, 100);
+        // // rb(右上角)
+        // $rb_corner  = imagerotate($lt_corner, 180, 0);
+        // imagecopymerge($target_image, $rb_corner, $target_width - $radius, $target_height - $radius, 0, 0, $radius, $radius, 100);
+        // // rt(右下角)
+        // $rt_corner  = imagerotate($lt_corner, 270, 0);
+        // imagecopymerge($target_image, $rt_corner, $target_width - $radius, 0, 0, 0, $radius, $radius, 100);
+
+        // imagecopyresized($background,$target_image,0,0,0,0,220,220,220,220);
+
+
+
+        return $target_image;
+    }
+
+    private function get_lt_rounder_corner($radius) {
+        $img     = imagecreatetruecolor($radius, $radius);  // 创建一个正方形的图像
+        $bgcolor    = imagecolorallocate($img, 223, 0, 0);   // 图像的背景
+        $fgcolor    = imagecolorallocate($img, 0, 0, 0);
+        imagefill($img, 0, 0, $bgcolor);
+        // $radius,$radius：以图像的右下角开始画弧
+        // $radius*2, $radius*2：已宽度、高度画弧
+        // 180, 270：指定了角度的起始和结束点
+        // fgcolor：指定颜色
+        imagefilledarc($img, $radius, $radius, $radius*2, $radius*2, 180, 270, $fgcolor, IMG_ARC_PIE);
+        // 将弧角图片的颜色设置为透明
+        imagecolortransparent($img, $fgcolor);
+        // 变换角度
+        // $img = imagerotate($img, 90, 0);
+        // $img = imagerotate($img, 180, 0);
+        // $img = imagerotate($img, 270, 0);
+        // header('Content-Type: image/png');
+        // imagepng($img);
+        return $img;
     }
 
     private function image_create_from_ext($imgfile)
@@ -226,14 +236,10 @@ class GeXingPic
         return $im;
     }
 
-    private function get_white_circle()
-    {
-        return imagecreatefrompng($this->white_circle);
-    }
 
-    private function get_bg()
-    {
-        return imagecreatefrompng($this->bg);
-    }
+
 }
-
+//
+//$p = new GeXingPic();
+////$p->getTextResource();
+//$p->build_xgt("./0.jpg");
