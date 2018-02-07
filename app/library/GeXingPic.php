@@ -28,7 +28,7 @@ class GeXingPic
 
         imagecopy($whiteImgObj, $bg, 0, 0, 0, 0, 640, 1060);
         imagecopy($whiteImgObj, $typeImgObj, 0, 0, 0, 0, 640, 935);
-        imagecopy($whiteImgObj, $textImgObj, $left, 625, 0, 0, 280, 55);
+        imagecopy($whiteImgObj, $textImgObj, 0, 625, 0, 0, 640, 55);
         //$buildBackground = $this->buildBackground();
 
         // // $blurBgImgObj = $this->blur($this->image_create_from_ext($avatar), $blurFactor);
@@ -76,15 +76,18 @@ class GeXingPic
     public function getTextResource($nickname) {
         //$str = "梁珩儿mm";
         //echo mb_strlen($str,'UTF-8');
-        $im =imagecreatetruecolor(280, 55);
+        //$im =imagecreatetruecolor(280, 55);
+        $im =imagecreatetruecolor(640, 55);
         imagesavealpha($im, true);
         $bg = imagecolorallocatealpha($im, 255, 0, 0, 127);
         imagefill($im, 0, 0, $bg);
         $col = imagecolorallocate($im, 255, 255, 255);
         $font= APP_PATH."/library/wenyue.otf"; //字体所放目录
+
+        $fontBox = imagettfbbox(40, 0, $font, $nickname);
         //$come=iconv("gb2312","utf-8","水火不容");
         imagettftext($im,40,0,0,45,$col,$font,$nickname); //写 TTF 文字到图中
-
+        imagettftext($im,40,0,ceil((640 - $fontBox[2]) / 2),45,$col,$font,$nickname);
         return $im;
         //imagepng($im, "./ddd.png");
     }
