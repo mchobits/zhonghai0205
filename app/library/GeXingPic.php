@@ -86,7 +86,7 @@ class GeXingPic
 
         $fontBox = imagettfbbox(40, 0, $font, $nickname);
         //$come=iconv("gb2312","utf-8","水火不容");
-        imagettftext($im,40,0,0,45,$col,$font,$nickname); //写 TTF 文字到图中
+        //imagettftext($im,40,0,0,45,$col,$font,$nickname); //写 TTF 文字到图中
         imagettftext($im,40,0,ceil((640 - $fontBox[2]) / 2),45,$col,$font,$nickname);
         return $im;
         //imagepng($im, "./ddd.png");
