@@ -64,7 +64,10 @@ class AdminController extends \Phalcon\Mvc\Controller
 
         $member = Members::findFirst($mid);
 
-        $want_lover = Members::findFirst($member->love_id);
+        if ($member->love_id != 0) {
+            $want_lover = Members::findFirst($member->love_id);
+            $this->view->setVar("want_lover", $want_lover);
+        }
 
 
         $lovers = Members::find([
@@ -73,7 +76,7 @@ class AdminController extends \Phalcon\Mvc\Controller
                 1 => $mid,
             ]
         ]);
-        $this->view->setVar("want_lover", $want_lover);
+
         $this->view->setVar("lovers", $lovers);
         $this->view->setVar("member", $member);
         $this->view->setMainView('admin/profile');
